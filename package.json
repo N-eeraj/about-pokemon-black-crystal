@@ -4,12 +4,11 @@
     "build": "nuxt build",
     "dev": "nuxt dev",
     "generate": "nuxt generate",
-    "deploy": "npm run generate && gh-pages -d dist",
+    "deploy": "sh deploy.sh",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare"
   },
   "devDependencies": {
-    "gh-pages": "^5.0.0",
     "nuxt": "^3.3.1"
   }
 }
