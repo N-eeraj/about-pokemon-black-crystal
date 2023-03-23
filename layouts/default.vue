@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <nav>
         <ul>
             <li>
                 <nuxt-link to="/">
@@ -19,6 +19,13 @@
                 </a>
             </li>
         </ul>
+    </nav>
+    <main>
         <slot />
-    </div>
+    </main>
 </template>
+
+<style
+    src="@styles/main/app.scss"
+    lang="scss">
+</style>
