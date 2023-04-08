@@ -23,7 +23,6 @@ useHead({
 </script>
 
 <template>
-    <div>
-        Page Not Found
-    </div>
+    <img />
+    <NuxtLayout />
 </template>
