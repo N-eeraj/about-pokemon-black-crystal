@@ -6,6 +6,7 @@ export default defineNuxtConfig({
         baseURL: process.env.NODE_ENV === 'production' ? '/about-pokemon-black-crystal/' : '/'
     },
     alias: {
+      '@composables': resolve(__dirname, './composables'),
       '@styles': resolve(__dirname, './styles'),
       '@images': resolve(__dirname, './public/images')
     }
