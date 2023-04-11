@@ -4,8 +4,8 @@
     "build": "nuxt build",
     "dev": "nuxt dev",
     "generate": "nuxt generate",
-    "deploy": "sh deploy.sh",
     "preview": "nuxt preview",
+    "deploy": "sh deploy.sh",
     "postinstall": "nuxt prepare"
   },
   "devDependencies": {

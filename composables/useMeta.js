@@ -1,8 +1,10 @@
 const useMeta = () => {
+    const config = useRuntimeConfig()
+
     const title = 'Pokémon Black Crystal'
     const website = 'https://n-eeraj.github.io/about-pokemon-black-crystal'
     const description = `${title} is a free to play fan made online Pokémon game that you can play with your friends`
-    const image = '/images/title.png'
+    const image = `${config.app.baseURL}images/title.png`
 
     useHead({
         title,
