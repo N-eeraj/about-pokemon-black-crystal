@@ -1,42 +1,54 @@
-# Nuxt 3 Minimal Starter
+# Pokémon Black Crystal
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+### About
+**Pokémon Black Crystal** is a free to play fan made online Pokémon game that you can play with your friends.
 
-## Setup
+### Game Modes
 
-Make sure to install the dependencies:
+<details>
+    <summary>
+        Story Mode
+    </summary>
+    Story mode consists of battles with several opponents.
+    </details>
 
-```bash
-# yarn
-yarn install
+<details>
+    <summary>
+        Exploration Mode
+    </summary>
+    Catch and battle with wild Pokémon using the Exploration mode.
+</details>
 
-# npm
-npm install
+<details>
+    <summary>
+        Arcade Mode
+    </summary>
+    Battle against trainers outside the story mode.
+</details>
 
-# pnpm
-pnpm install
-```
+<details>
+    <summary>
+        PVP Mode
+    </summary>
+    Battle with your friends in real time.
+</details>
 
-## Development Server
+<details>
+    <summary>
+        Trade Mode
+    </summary>
+    Trade Pokémon with your friends.
+</details>
 
-Start the development server on http://localhost:3000
+<details>
+    <summary>
+        Carnival Mode
+    </summary>
+    Have fun playing mini-games.
+</details>
 
-```bash
-npm run dev
-```
 
-## Production
+<br>
 
-Build the application for production:
-
-```bash
-npm run build
-```
-
-Locally preview production build:
-
-```bash
-npm run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+Check out the [Pokémon Black Crystal game](https://n-eeraj.github.io/pokemon-black-crystal).
+Or have a look at that repository [pokemon-black-crystal](https://github.com/N-eeraj/pokemon-black-crystal)

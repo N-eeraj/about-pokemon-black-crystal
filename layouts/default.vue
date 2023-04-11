@@ -1,3 +1,8 @@
+<script setup>
+import useMeta from '@/composables/useMeta'
+useMeta()
+</script>
+
 <template>
     <nav>
         <ul>
@@ -12,11 +17,9 @@
                 </nuxt-link>
             </li>
             <li>
-                <a
-                    href="https://n-eeraj.github.io/pokemon-black-crystal"
-                    target="_blank">
-                    Play Game
-                </a>
+                <nuxt-link to="/disclaimer">
+                    Disclaimer
+                </nuxt-link>
             </li>
         </ul>
     </nav>

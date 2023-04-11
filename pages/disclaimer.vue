@@ -1,7 +1,7 @@
 <template>
     <div>
       <h1>
-        Tutorials
+        Disclaimer
       </h1>
     </div>
 </template>

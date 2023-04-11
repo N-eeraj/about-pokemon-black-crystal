@@ -9,15 +9,15 @@ const useMeta = () => {
     useHead({
         title,
         meta: [
-        { name: 'title', content: title },
-        { name: 'ogType', content: 'website' },
-        { name: 'ogTitle', content: title },
-        { name: 'ogUrl', content: website },
-        { name: 'description', content: description },
-        { name: 'ogDescription', content: description },
-        { name: 'ogImage', content: image },
-        { hid: 'og-image', property: 'og:image', content: image },
-        { name: 'twitterCard', content: 'summary_large_image' }
+            { name: 'title', content: title },
+            { name: 'ogType', content: 'website' },
+            { name: 'ogTitle', content: title },
+            { name: 'ogUrl', content: website },
+            { name: 'description', content: description },
+            { name: 'ogDescription', content: description },
+            { name: 'ogImage', content: image },
+            { hid: 'og-image', property: 'og:image', content: image },
+            { name: 'twitterCard', content: 'summary_large_image' }
         ]
     })
 }
