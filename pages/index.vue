@@ -1,3 +1,7 @@
+<script setup>
+useMeta()
+</script>
+
 <template>
   <h1>
     Main

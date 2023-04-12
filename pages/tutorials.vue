@@ -1,3 +1,7 @@
+<script setup>
+useMeta('Tutorials')
+</script>
+
 <template>
     <div>
       <h1>

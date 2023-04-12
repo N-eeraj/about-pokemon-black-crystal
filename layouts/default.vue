@@ -1,8 +1,3 @@
-<script setup>
-import useMeta from '@/composables/useMeta'
-useMeta()
-</script>
-
 <template>
     <nav>
         <ul>

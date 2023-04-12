@@ -1,4 +1,4 @@
-const useMeta = () => {
+const useMeta = page => {
     const config = useRuntimeConfig()
 
     const title = 'Pokémon Black Crystal'
@@ -7,7 +7,7 @@ const useMeta = () => {
     const image = `${config.app.baseURL}images/title.png`
 
     useHead({
-        title,
+        title: page ? `${page} | ${title}` : title,
         meta: [
             { name: 'title', content: title },
             { name: 'ogType', content: 'website' },

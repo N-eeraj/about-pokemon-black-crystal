@@ -1,6 +1,5 @@
 <script setup>
-import useMeta from '@/composables/useMeta'
-useMeta()
+useMeta('Page not found')
 </script>
 
 <template>

@@ -1,3 +1,7 @@
+<script setup>
+useMeta('Disclaimer')
+</script>
+
 <template>
     <div>
       <h1>
