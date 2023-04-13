@@ -1,0 +1,12 @@
+@use "sass:map";
+
+@use "@styles/abstracts/colors/palette";
+@use "@styles/template";
+
+.error-container {
+    height:200vh;
+
+    .error-image {
+        background-image: linear-gradient(map.get(palette.$water, "start"), map.get(palette.$water, "end"));
+    }
+}

@@ -24,6 +24,7 @@
 </template>
 
 <style
-    src="@styles/main/app.scss"
-    lang="scss">
+    src="@styles/app.scss"
+    lang="scss"
+    scoped>
 </style>

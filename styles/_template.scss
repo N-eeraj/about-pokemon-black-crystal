@@ -1,4 +1,4 @@
-@use "@styles/main/palette";
+@use "@styles/abstracts/colors/palette";
 
 * {
     margin: 0;
@@ -10,12 +10,11 @@
     border: none;
     outline: none;
     scrollbar-width: thin;
-    scrollbar-color: palette.$accent palette.$primary;
+    scrollbar-color: palette.$secondary-white palette.$primary;
 }
 
-
 ::-webkit-scrollbar {
-    width: 5px;
+    width: 7px;
 }
 
 ::-webkit-scrollbar-track {
@@ -23,10 +22,10 @@
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: palette.$accent;
-    border-radius: 5px;
+    background-color: palette.$secondary;
+    border-radius: 7px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background-color: palette.$primary;
+    background-color: palette.$secondary-white;
 }
