@@ -1,9 +1,33 @@
 @use "@styles/template";
 @use "@styles/abstracts/colors/palette";
 @use "@styles/abstracts/functions/gradient";
+@use "@styles/abstracts/mixins/flex";
 
 .error-container {
+    @include flex.flex($direction: column, $justify: center, $row: 50);
+    width: 100vw;
+    height: 100vh;
+    padding: 5%;
+    background-color: palette.$primary;
 
     .error-image {
+        width: 100%;
+    }
+
+    .text-container {
+        @include flex.flex($direction: column, $justify: center, $row: 25);
+
+        .message {
+            text-align: center;
+            color: palette.$secondary-white;
+        }
+
+        .redirect-btn {
+            width: 200px;
+            padding: 10px;
+            border-radius: 50px;
+            background-color: palette.$accent;
+            color: palette.$white;
+        }
     }
 }
