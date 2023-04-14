@@ -1,0 +1,12 @@
+@use "sass:map";
+
+@mixin fontSize($type, $size) {
+
+    @media (orientation: portrait) {
+        font-size: map.get($type, "portrait", $size);
+    }
+
+    @media (orientation: landscape) {
+        font-size: map.get($type, "landscape", $size);
+    }
+}
