@@ -1,4 +1,5 @@
 @use "@styles/abstracts/colors/palette";
+@use "@styles/abstracts/font/family" as font-families;
 
 * {
     margin: 0;
@@ -11,6 +12,8 @@
     outline: none;
     scrollbar-width: thin;
     scrollbar-color: palette.$secondary-white palette.$primary;
+    font-family: font-families.$montserrat;
+    font-weight: 500;
 }
 
 ::-webkit-scrollbar {

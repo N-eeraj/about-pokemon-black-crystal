@@ -1,14 +1,29 @@
 $text: (
-    "portrait": (),
-    "landscape": ()
+    "sm": (
+        "large": 20pt
+    ),
+    "md": (
+        "large": 15pt
+    ),
+    "lg": (
+        "large": 30pt
+    )
 );
 
 $button: (
-    "portrait": (),
-    "landscape": ()
+    "sm": (
+        "normal": 12pt
+    ),
+    "md": (
+        "normal": 10pt
+    ),
+    "lg": (
+        "normal": 15pt
+    )
 );
 
 $heading: (
-    "portrait": (),
-    "landscape": ()
+    "sm": (),
+    "md": (),
+    "lg": ()
 );
