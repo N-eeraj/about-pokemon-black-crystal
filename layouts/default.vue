@@ -7,6 +7,5 @@
 
 <style
     src="@styles/app.scss"
-    lang="scss"
-    scoped>
+    lang="scss">
 </style>

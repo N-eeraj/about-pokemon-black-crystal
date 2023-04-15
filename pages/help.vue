@@ -1,11 +1,11 @@
 <script setup>
-useMeta('Tutorials')
+useMeta('Help')
 </script>
 
 <template>
     <div>
       <h1>
-        Tutorials
+        Help
       </h1>
     </div>
 </template>

@@ -34,7 +34,7 @@
         }
     }
 
-    @media screen and (orientation: landscape) {
+    @media (orientation: landscape) {
         flex-direction: row;
 
         .error-image {

@@ -2,16 +2,19 @@
     {
         "to": "/",
         "text": "Home",
-        "icon": "mdi:handshake"
+        "icon": "ic:round-home",
+        "className": "home"
     },
     {
-        "to": "/tutorials",
-        "text": "Tutorials",
-        "icon": "ic:round-home"
+        "to": "/help",
+        "text": "Help",
+        "icon": "mdi:handshake",
+        "className": "help"
     },
     {
-        "to": "/disclaimer",
-        "text": "Disclaimer",
-        "icon": "material-symbols:info"
+        "to": "/info",
+        "text": "Info",
+        "icon": "material-symbols:info",
+        "className": "info"
     }
 ]

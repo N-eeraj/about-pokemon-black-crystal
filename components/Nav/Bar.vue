@@ -4,13 +4,14 @@ import navLinks from '@/data/navLinks'
 
 <template>
     <nav class="nav-bar">
-        <ul>
+        <ul class="nav-list">
             <NavItem
-                v-for="({ to, text, icon }, index) in navLinks"
+                v-for="({ to, text, icon, className }, index) in navLinks"
                 :to="to"
                 :text="text"
                 :icon="icon"
-                :key="index" />
+                :key="index"
+                :className="className" />
         </ul>
     </nav>
 </template>

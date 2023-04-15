@@ -1,0 +1,33 @@
+@use "@styles/abstracts/mixins/flex";
+
+.nav-item {
+    flex: 1;
+
+    .nav-link {
+        @include flex.flex($direction: column);
+    }
+
+    @media (orientation: portrait)  {
+        &.home {
+            order: 1;
+        }
+        &.help {
+            order: 0;
+        }
+        &.info {
+            order: 2;
+        }
+
+        .link-icon {
+            display: block;
+        }
+    }
+
+    @media (orientation: landscape) {
+        flex: unset;
+
+        .link-icon {
+            display: none;
+        }
+    }
+}
