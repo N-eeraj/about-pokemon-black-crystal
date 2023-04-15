@@ -1,24 +1,6 @@
 <script setup>
 import navLinks from '@/data/navLinks'
-
-const navBar = ref(null)
-
-const checkAtTop = () => {
-    const { clientHeight: navBarHeight, classList: navBarClassList } = navBar.value
-    if (window.pageYOffset > navBarHeight)
-        navBarClassList.remove('at-top')
-    else
-        navBarClassList.add('at-top')
-}
-
-onMounted(() => {
-    checkAtTop()
-    window.addEventListener('scroll', checkAtTop)
-})
-
-onBeforeUnmount(() => {
-    window.removeEventListener('scroll', () => {})
-})
+const navBar = useAtTop()
 </script>
 
 <template>
