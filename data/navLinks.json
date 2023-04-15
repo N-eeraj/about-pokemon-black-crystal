@@ -1,0 +1,17 @@
+[
+    {
+        "to": "/",
+        "text": "Home",
+        "icon": "mdi:handshake"
+    },
+    {
+        "to": "/tutorials",
+        "text": "Tutorials",
+        "icon": "ic:round-home"
+    },
+    {
+        "to": "/disclaimer",
+        "text": "Disclaimer",
+        "icon": "material-symbols:info"
+    }
+]
