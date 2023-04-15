@@ -5,9 +5,9 @@
 @use "@styles/abstracts/mixins/font-size";
 
 .error-container {
-    @include flex.flex($direction: column, $justify: center, $row: 50);
+    @include flex.flex($direction: column, $justify: center, $row: 50, $col: 30);
     width: 100vw;
-    height: 100vh;
+    height: 100dvh;
     padding: 5%;
     background-color: palette.$primary;
 
@@ -25,9 +25,8 @@
         }
 
         .redirect-btn {
-            width: min(50%, 150px);
-            padding: 7px;
-            border-radius: 50px;
+            padding: 7px 20px;
+            border-radius: 30px;
             background-color: palette.$accent;
             color: palette.$white;
             @include font-size.fontSize(font-sizes.$button);
@@ -36,18 +35,21 @@
     }
 
     @media screen and (orientation: landscape) {
+        flex-direction: row;
+
         .error-image {
-            width: unset;
-            height: 50%;
+            width: 40%;
         }
         .text-container {
-            row-gap: 20px;
+            width: 50%;
+
+            .redirect-btn {
+                padding: 10px 15px;
+            }
         }
     }
 
     @media (orientation: landscape) and (min-width: 1000px) {
-        row-gap: 80px;
-
         .text-container {
             row-gap: 30px;
         }

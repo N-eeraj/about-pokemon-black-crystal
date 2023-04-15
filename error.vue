@@ -12,9 +12,12 @@ useMeta('Page not found')
             <h3 class="message">
                 A sleeping Snorlax blocked your path !
             </h3>
-            <button class="redirect-btn">
-                Go Back
-            </button>
+            <NuxtLink
+                to="/"
+                replace
+                class="redirect-btn">
+                Return Home
+            </NuxtLink>
         </div>
     </div>
 </template>
