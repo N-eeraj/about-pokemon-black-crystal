@@ -1,4 +1,6 @@
+@use "@styles/abstracts/colors/palette";
 @use "@styles/abstracts/mixins/flex";
+@use "@styles/abstracts/mixins/gradient-text";
 
 .nav-item {
     flex: 1;
@@ -7,19 +9,33 @@
         @include flex.flex($direction: column);
     }
 
-    @media (orientation: portrait)  {
-        &.home {
-            order: 1;
-        }
-        &.help {
-            order: 0;
-        }
-        &.info {
-            order: 2;
-        }
-
+    @media (orientation: portrait) {
         .link-icon {
             display: block;
+        }
+
+        &.home {
+            order: 1;
+
+            .link-text {
+                @include gradient-text.gradientText(palette.$fire, 100);
+            }
+        }
+
+        &.help {
+            order: 0;
+
+            .link-text {
+                @include gradient-text.gradientText(palette.$grass, 100);
+            }
+        }
+
+        &.info {
+            order: 2;
+
+            .link-text {
+                @include gradient-text.gradientText(palette.$water, 100);
+            }
         }
     }
 
@@ -28,6 +44,11 @@
 
         .link-icon {
             display: none;
+        }
+
+        .link-text {
+            color: palette.$white;
+            text-shadow: 0 0 10px palette.$accent;
         }
     }
 }
