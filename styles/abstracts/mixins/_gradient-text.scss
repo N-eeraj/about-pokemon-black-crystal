@@ -1,0 +1,8 @@
+@use "@styles/abstracts/functions/gradient";
+
+@mixin gradientText($gradient, $direction: 90) {
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-image: gradient.linearGradient($gradient, $direction);
+}

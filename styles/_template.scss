@@ -1,4 +1,4 @@
-@use "@styles/abstracts/colors/palette";
+@use "@styles/abstracts/colors/primary";
 @use "@styles/abstracts/font/family" as font-families;
 
 * {
@@ -11,7 +11,7 @@
     border: none;
     outline: none;
     scrollbar-width: thin;
-    scrollbar-color: palette.$secondary-white palette.$primary;
+    scrollbar-color: primary.$secondary-white primary.$primary;
     font-family: font-families.$montserrat;
     font-weight: 500;
 }
@@ -29,14 +29,14 @@ button {
 }
 
 ::-webkit-scrollbar-track {
-    background-color: palette.$primary;
+    background-color: primary.$primary;
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: palette.$secondary;
+    background-color: primary.$secondary;
     border-radius: 7px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background-color: palette.$secondary-white;
+    background-color: primary.$secondary-white;
 }

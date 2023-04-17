@@ -1,5 +1,5 @@
 @use "@styles/template";
-@use "@styles/abstracts/colors/palette";
+@use "@styles/abstracts/colors/primary";
 @use "@styles/abstracts/font/sizes" as font-sizes;
 @use "@styles/abstracts/mixins/flex";
 @use "@styles/abstracts/mixins/font-size";
@@ -9,7 +9,7 @@
     width: 100vw;
     height: 100dvh;
     padding: 5%;
-    background-color: palette.$primary;
+    background-color: primary.$primary;
 
     .error-image {
         width: 100%;
@@ -20,15 +20,15 @@
 
         .message {
             text-align: center;
-            color: palette.$secondary-white;
+            color: primary.$secondary-white;
             @include font-size.fontSize(font-sizes.$text, "large");
         }
 
         .redirect-btn {
             padding: 7px 20px;
             border-radius: 30px;
-            background-color: palette.$accent;
-            color: palette.$white;
+            background-color: primary.$accent;
+            color: primary.$white;
             @include font-size.fontSize(font-sizes.$button);
             font-weight: 600;
         }

@@ -1,5 +1,5 @@
 @use "sass:map";
 
-@function gradient($color, $direction: 90) {
+@function linearGradient($color, $direction: 90) {
     @return linear-gradient(#{$direction}deg, map.get($color, "start"), map.get($color, "end"));
 }
