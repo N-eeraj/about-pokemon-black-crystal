@@ -2,6 +2,14 @@
 @use "@styles/abstracts/mixins/flex";
 @use "@styles/abstracts/mixins/gradient-text";
 
+@mixin bottom-nav-link($order, $gradient) {
+    order: $order;
+
+    .link-text {
+        @include gradient-text.gradientText($gradient, 100);
+    }
+}
+
 .nav-item {
     flex: 1;
 
@@ -15,27 +23,15 @@
         }
 
         &.home {
-            order: 1;
-
-            .link-text {
-                @include gradient-text.gradientText(palette.$fire, 100);
-            }
+            @include bottom-nav-link(1, palette.$fire);
         }
 
         &.help {
-            order: 0;
-
-            .link-text {
-                @include gradient-text.gradientText(palette.$grass, 100);
-            }
+            @include bottom-nav-link(0, palette.$grass);
         }
 
         &.info {
-            order: 2;
-
-            .link-text {
-                @include gradient-text.gradientText(palette.$water, 100);
-            }
+            @include bottom-nav-link(2, palette.$water);
         }
     }
 
