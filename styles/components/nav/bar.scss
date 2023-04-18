@@ -26,7 +26,11 @@
 
         .nav-list {
             justify-content: flex-end;
-            column-gap: 25px;
+            column-gap: 30px;
         }
+    }
+
+    @media (orientation: landscape) and (max-width: 999px) {
+        height: 50px;
     }
 }

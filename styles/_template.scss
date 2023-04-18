@@ -11,7 +11,7 @@
     border: none;
     outline: none;
     scrollbar-width: thin;
-    scrollbar-color: primary.$secondary-white primary.$primary;
+    scrollbar-color: primary.$secondary primary.$primary;
     font-family: font-families.$montserrat;
     font-weight: 500;
 }
@@ -33,10 +33,15 @@ button {
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: primary.$secondary;
+    background-color: primary.$secondary-white;
     border-radius: 7px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background-color: primary.$secondary-white;
+    background-color: primary.$secondary;
+}
+
+::selection {
+    background-color: primary.$secondary;
+    color: primary.$accent;
 }

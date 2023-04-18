@@ -1,5 +1,7 @@
 @use "@styles/abstracts/colors/palette";
+@use "@styles/abstracts/font/sizes" as font-sizes;
 @use "@styles/abstracts/mixins/flex";
+@use "@styles/abstracts/mixins/font-size";
 @use "@styles/abstracts/mixins/gradient-text";
 
 @mixin bottom-nav-link($order, $gradient) {
@@ -18,12 +20,17 @@
         height: 100%;
 
         .link-text {
+            @include font-size.fontSize(font-sizes.$text, "small");
             font-weight: 600;
         }
     }
 
     @media (orientation: portrait) {
         height: 100%;
+
+        .nav-link:not(.router-link-active) {
+            filter: grayscale(1);
+        }
 
         .link-icon {
             display: block;
@@ -47,13 +54,36 @@
     @media (orientation: landscape) {
         flex: unset;
 
+        .router-link-active .link-text {
+            text-shadow: 0 0 7px palette.$accent;
+            transition: 400ms;
+        }
+
         .link-icon {
             display: none;
         }
 
         .link-text {
+            position: relative;
             color: palette.$white;
-            text-shadow: 0 0 10px palette.$accent;
+            transition: 400ms;
+
+            &::before {
+                content: '';
+                position: absolute;
+                top: 100%;
+                left: -10%;
+                width: 120%;
+                height: 3px;
+                background-color: palette.$accent;
+                transform: scaleX(0);
+                transition: 400ms;
+            }
+            
+            &:hover::before {
+                transform: scaleX(1);
+                box-shadow: 0 0 5px palette.$accent;
+            }
         }
     }
 }
