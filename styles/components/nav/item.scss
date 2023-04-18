@@ -14,12 +14,21 @@
     flex: 1;
 
     .nav-link {
-        @include flex.flex($direction: column);
+        @include flex.flex($direction: column, $justify: center, $row: 5);
+        height: 100%;
+
+        .link-text {
+            font-weight: 600;
+        }
     }
 
     @media (orientation: portrait) {
+        height: 100%;
+
         .link-icon {
             display: block;
+            width: 25px;
+            aspect-ratio: 1;
         }
 
         &.home {

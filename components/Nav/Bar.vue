@@ -9,12 +9,11 @@ const navBar = useAtTop()
         class="nav-bar at-top">
         <ul class="nav-list">
             <NavItem
-                v-for="({ to, text, icon, className }, index) in navLinks"
+                v-for="({ to, text, icon }, index) in navLinks"
                 :to="to"
                 :text="text"
                 :icon="icon"
-                :key="index"
-                :className="className" />
+                :key="index" />
         </ul>
     </nav>
 </template>

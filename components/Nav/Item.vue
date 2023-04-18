@@ -11,10 +11,6 @@ defineProps({
     icon: {
         type: String,
         required: true
-    },
-    className: {
-        type: String,
-        required: true
     }
 })
 </script>
@@ -22,17 +18,21 @@ defineProps({
 <template>
     <li
         class="nav-item"
-        :class="className">
-        <nuxt-link
+        :class="icon">
+        <NuxtLink
             :to="to"
             class="nav-link">
-            <Icon
-                :name="icon"
+
+            <img
+                :src="`/icons/${icon}.svg`"
+                :alt="icon"
                 class="link-icon" />
+
             <span class="link-text">
                 {{ text }}
             </span>
-        </nuxt-link>
+
+        </NuxtLink>
     </li>
 </template>
 
