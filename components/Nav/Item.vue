@@ -24,7 +24,7 @@ defineProps({
             class="nav-link">
 
             <img
-                :src="`/icons/${icon}.svg`"
+                :src="`icons/navigation/${icon}.svg`"
                 :alt="icon"
                 class="link-icon" />
 
