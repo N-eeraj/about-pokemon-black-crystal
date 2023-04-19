@@ -1,6 +1,39 @@
 <template>
     <header class="header">
+        <div class="content-container">
+            <div class="title">
+                <img
+                    src="images/pokemon-logo.png"
+                    alt="Pokémon"
+                    class="logo" />
+                <h3 class="name">
+                    Pokémon Black Crystal
+                </h3>
+            </div>
 
+            <div class="description">
+                <h2 class="heading">
+                    Gotta catch 'em all!
+                </h2>
+                <p class="content">
+                    Become a Pokémon trainer, overcome challenges & become a Pokémon master.
+                </p>
+            </div>
+
+            <div class="cta-container">
+                <button>
+                    Play Now
+                </button>
+                <button>
+                    Know More
+                </button>
+            </div>
+        </div>
+
+        <img
+            src="images/home/header/pokemon.png"
+            alt="Decoration Image"
+            class="decoration-image" />
     </header>
 </template>
 
