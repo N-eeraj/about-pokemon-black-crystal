@@ -21,12 +21,13 @@
             </div>
 
             <div class="cta-container">
-                <button>
-                    Play Now
-                </button>
-                <button>
-                    Know More
-                </button>
+                <LinkButton
+                    text="Play Now"
+                    link="https://n-eeraj.github.io/pokemon-black-crystal"
+                    external />
+                <LinkButton
+                    text="Know More"
+                    link="#about-game" />
             </div>
         </div>
 

@@ -1,7 +1,7 @@
 @use "@styles/abstracts/mixins/flex";
 
 .header {
-    @include flex.flex($direction: column);
+    @include flex.flex($direction: column, $justify: center);
     width: 100vw;
     height: 100vh;
     background-image: url("images/home/header/background.png");
@@ -11,9 +11,5 @@
     .decoration-image {
         width: 100%;
         object-fit: contain;
-    }
-
-    @media (orientation: portrait) {
-        padding-bottom: 75px;
     }
 }
