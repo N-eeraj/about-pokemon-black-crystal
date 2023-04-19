@@ -1,14 +1,17 @@
 $text: (
     "sm": (
         "small": 10pt,
+        "normal": 12pt,
         "large": 20pt
     ),
     "md": (
         "small": 12pt,
+        "normal": 10pt,
         "large": 15pt
     ),
     "lg": (
         "small": 16pt,
+        "normal": 14pt,
         "large": 28pt
     )
 );
@@ -26,7 +29,19 @@ $button: (
 );
 
 $heading: (
-    "sm": (),
-    "md": (),
-    "lg": ()
+    "sm": (
+        "small": 16pt,
+        "normal": 24pt,
+        "large": 20pt
+    ),
+    "md": (
+        "small": 20pt,
+        "normal": 20pt,
+        "large": 20pt
+    ),
+    "lg": (
+        "small": 20pt,
+        "normal": 20pt,
+        "large": 20pt
+    )
 );

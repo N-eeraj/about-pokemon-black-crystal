@@ -6,8 +6,8 @@
                     src="images/pokemon-logo.png"
                     alt="Pokémon"
                     class="logo" />
-                <h3 class="name">
-                    Pokémon Black Crystal
+                <h3 class="game-name">
+                    Black Crystal
                 </h3>
             </div>
 
@@ -24,10 +24,12 @@
                 <LinkButton
                     text="Play Now"
                     link="https://n-eeraj.github.io/pokemon-black-crystal"
-                    external />
+                    external
+                    class="play-now-btn" />
                 <LinkButton
                     text="Know More"
-                    link="#about-game" />
+                    link="#about-game"
+                    class="know-more-btn" />
             </div>
         </div>
 

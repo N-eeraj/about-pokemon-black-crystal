@@ -1,15 +1,82 @@
+@use "@styles/abstracts/colors/primary";
+@use "@styles/abstracts/font/sizes" as font-sizes;
+@use "@styles/abstracts/font/family" as font-families;
 @use "@styles/abstracts/mixins/flex";
+@use "@styles/abstracts/mixins/font-size";
 
 .header {
+    position: relative;
     @include flex.flex($direction: column, $justify: center);
     width: 100vw;
-    height: 100vh;
+    height: 100dvh;
+    padding: 0 5%;
     background-image: url("images/home/header/background.png");
     background-size: cover;
     background-position: center;
 
+    .content-container {
+        @include flex.flex($direction: column, $justify: center, $row: 25);
+
+        .title {
+            @include flex.flex($direction: column, $row: 10);
+
+            .logo {
+                width: 200px;
+            }
+
+            .game-name {
+                font-family: font-families.$facon;
+                color: primary.$white;
+                @include font-size.fontSize(font-sizes.$heading);
+            }
+        }
+
+        .description {
+            @include flex.flex($direction: column, $row: 10);
+            color: primary.$white;
+
+            .heading {
+                @include font-size.fontSize(font-sizes.$heading, "small");
+                text-shadow: 0 0 10px primary.$accent;
+                font-weight: 700;
+                text-transform: uppercase;
+            }
+
+            .content {
+                @include font-size.fontSize(font-sizes.$text, "small");
+            }
+        }
+
+        .cta-container {
+            position: absolute;
+            @include flex.flex($direction: column, $row: 10);
+            bottom: 2.5%;
+            width: 90%;
+
+            .link-btn {
+                width: 100%;
+                color: primary.$accent;
+                
+
+                &.play-now-btn {
+                    border-color: primary.$white;
+                    background-color: primary.$white;
+                }
+
+                &.know-more-btn {
+                    border-color: primary.$accent;
+                }
+            }
+        }
+    }
+
     .decoration-image {
         width: 100%;
+        height: 50%;
         object-fit: contain;
+    }
+
+    @media (orientation: portrait) {
+        padding-bottom: 50px;
     }
 }

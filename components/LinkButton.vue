@@ -20,7 +20,7 @@ defineProps({
     <NuxtLink
         :to="link"
         :target="external ? '_blank' : '_self'"
-        class="link">
+        class="link-btn">
         {{ text }}
     </NuxtLink>
 </template>

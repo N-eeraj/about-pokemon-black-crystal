@@ -13,6 +13,7 @@
     scrollbar-width: thin;
     scrollbar-color: primary.$secondary-white primary.$primary;
     font-family: font-families.$montserrat;
+    scroll-behavior: smooth;
     font-weight: 500;
 }
 
