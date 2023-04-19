@@ -1,0 +1,10 @@
+@use "@styles/abstracts/font/sizes" as font-sizes;
+@use "@styles/abstracts/mixins/font-size";
+
+.link {
+    padding: 7px 15px;
+    border: 2px solid;
+    border-radius: 7px;
+    font-weight: 700;
+    @include font-size.fontSize(font-sizes.$button);
+}
