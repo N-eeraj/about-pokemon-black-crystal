@@ -3,7 +3,7 @@ const useAtTop = () => {
 
     const checkAtTop = () => {
         const { clientHeight, classList } = elementRef.value
-        if (window.pageYOffset > clientHeight)
+        if (window.pageYOffset >= clientHeight)
             classList.remove('at-top')
         else
             classList.add('at-top')
