@@ -25,7 +25,7 @@
 
     @media (orientation: landscape) {
         top: 0;
-        @include main-container.max-width-padding(0, 5%);
+        @include main-container.max-width-padding;
         transition: 400ms;
 
         &.at-top {
