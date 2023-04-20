@@ -3,7 +3,7 @@
         <div class="content-container">
             <div class="title">
                 <img
-                    src="images/pokemon-logo.png"
+                    :src="'images/pokemon-logo.png'"
                     alt="Pokémon"
                     class="logo" />
                 <h3 class="game-name">
@@ -34,7 +34,7 @@
         </div>
 
         <img
-            src="images/home/header/pokemon.png"
+            :src="'images/home/header/pokemon.png'"
             alt="Decoration Image"
             class="decoration-image" />
     </header>

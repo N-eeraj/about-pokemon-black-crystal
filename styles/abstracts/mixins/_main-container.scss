@@ -1,3 +1,3 @@
 @mixin max-width-padding($x, $y) {
-    padding: $x max(calc((100vw - 1200px) / 2), $y);
+    padding: $x max(calc((100vw - 1800px) / 2), $y);
 }

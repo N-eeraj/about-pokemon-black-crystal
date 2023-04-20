@@ -25,6 +25,10 @@ button {
     cursor: pointer;
 }
 
+img {
+    pointer-events: none;
+}
+
 ::-webkit-scrollbar {
     width: 7px;
 }

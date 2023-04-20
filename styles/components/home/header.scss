@@ -55,15 +55,27 @@
 
             .link-btn {
                 color: primary.$accent;
+                transition: 400ms;
                 
+                &:hover, &:focus {
+                    box-shadow: 0 0 7px primary.$accent;
+                }
 
                 &.play-now-btn {
                     border-color: primary.$white;
                     background-color: primary.$white;
+                    
+                    &:hover, &:focus {
+                        border-color: primary.$accent;
+                    }
                 }
-
+                
                 &.know-more-btn {
                     border-color: primary.$accent;
+                    
+                    &:hover, &:focus {
+                        background-color: primary.$primary;
+                    }
                 }
             }
         }
