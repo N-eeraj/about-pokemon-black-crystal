@@ -1,3 +1,19 @@
 @mixin max-width-padding($x, $y) {
     padding: $x max(calc((100vw - 1800px) / 2), $y);
 }
+
+@mixin container($x, $y) {
+    @include max-width-padding($x, $y);
+
+    @media (orientation: portrait) {
+        padding-bottom: 75px;
+    }
+    
+    @media (orientation: landscape) {
+        padding-top: 75px;
+    }
+
+    @media (orientation: landscape) and (max-width: 999px) {
+        padding-top: 50px;
+    }
+}
