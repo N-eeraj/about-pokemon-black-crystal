@@ -2,6 +2,7 @@
 @use "@styles/abstracts/font/sizes" as font-sizes;
 @use "@styles/abstracts/font/family" as font-families;
 @use "@styles/abstracts/mixins/flex";
+@use "@styles/abstracts/mixins/main-container";
 @use "@styles/abstracts/mixins/font-size";
 
 .header {
@@ -9,7 +10,7 @@
     @include flex.flex($direction: column, $justify: center);
     width: 100vw;
     height: 100dvh;
-    padding: 0 5%;
+    @include main-container.max-width-padding(0, 5%);
     background-image: url("images/home/header/background.png");
     background-size: cover;
     background-position: center;

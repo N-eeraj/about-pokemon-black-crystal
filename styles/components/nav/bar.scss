@@ -1,5 +1,6 @@
 @use "@styles/abstracts/colors/primary";
 @use "@styles/abstracts/mixins/flex";
+@use "@styles/abstracts/mixins/main-container";
 
 .nav-bar {
     position: fixed;
@@ -24,7 +25,7 @@
 
     @media (orientation: landscape) {
         top: 0;
-        padding: 0 5%;
+        @include main-container.max-width-padding(0, 5%);
         transition: 400ms;
 
         &.at-top {
