@@ -57,8 +57,20 @@
         flex-direction: row;
 
         .text-container {
+            align-items: flex-start;
             order: 1;
-            width: 50%;
+            width: min(50%, 720px);
+        }
+
+        .image-container {
+            width: 45%;
+            height: 100%;
+
+            .phone-frame {
+                width: unset;
+                height: 60dvh;
+                border-radius: min(12%, 36px);
+            }
         }
     }
 }
