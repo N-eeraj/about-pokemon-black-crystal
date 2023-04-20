@@ -1,0 +1,45 @@
+@use "@styles/abstracts/colors/palette";
+@use "@styles/abstracts/font/sizes" as font-sizes;
+@use "@styles/abstracts/mixins/font-size";
+@use "@styles/abstracts/mixins/flex";
+@use "@styles/abstracts/mixins/main-container";
+@use "@styles/abstracts/mixins/gradient-text";
+
+#about-game {
+    @include flex.flex($direction: column, $justify: center);
+    @include main-container.full-screen;
+    @include main-container.container(0, 5%);
+    background-color: palette.$primary;
+
+    .text-container {
+        @include flex.flex($direction: column, $row: 10);
+
+        .title {
+            @include gradient-text.gradientText(palette.$aquamarine);
+            @include font-size.fontSize(font-sizes.$heading, "large");
+            font-weight: 800;
+        }
+
+        .content {
+            color: palette.$white;
+            font-weight: 500;
+            @include font-size.fontSize(font-sizes.$text);
+        }
+    }
+
+    @media (orientation: portrait) {
+        .title {
+            text-align: center;
+        }
+
+    }
+
+    @media (orientation: landscape) {
+        flex-direction: row;
+
+        .text-container {
+            order: 1;
+            width: 50%;
+        }
+    }
+}
