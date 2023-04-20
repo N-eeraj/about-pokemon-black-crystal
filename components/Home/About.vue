@@ -1,3 +1,12 @@
+<script setup>
+import { getInRange } from '@composables/random'
+
+const randomCharacter = computed(() => {
+    const randomNumber = getInRange(0, 4)
+    return `/images/home/about/characters/character-${randomNumber}.gif`
+})
+</script>
+
 <template>
     <section id="about-game">
         <div class="text-container">
@@ -10,6 +19,11 @@
         </div>
 
         <div class="image-container">
+            <img
+                :src="'/images/home/about/phone-frame.png'"
+                alt="Phone Frame"
+                class="phone-frame"
+                :style="`background-image: url(${randomCharacter});`" />
         </div>
     </section>
 </template>
