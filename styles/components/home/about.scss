@@ -6,13 +6,14 @@
 @use "@styles/abstracts/mixins/gradient-text";
 
 #about-game {
-    @include flex.flex($direction: column, $justify: center);
+    @include flex.flex($direction: column, $justify: center, $row: 25);
     @include main-container.full-screen;
-    @include main-container.container(0, 5%);
+    @include main-container.container(0, 0);
     background-color: palette.$primary;
 
     .text-container {
         @include flex.flex($direction: column, $row: 10);
+        width: 90%;
 
         .title {
             @include gradient-text.animated-gradient-text(palette.$aquamarine);
@@ -27,11 +28,29 @@
         }
     }
 
+    .image-container {
+        position: relative;
+        display: grid;
+        place-items: center;
+
+        .phone-frame {
+            width: 55%;
+            background-color: palette.$white;
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+            border-radius: 30px;
+        }
+    }
+
     @media (orientation: portrait) {
         .title {
             text-align: center;
         }
 
+        .image-container {
+            width: 95%;
+        }
     }
 
     @media (orientation: landscape) {
