@@ -1,4 +1,5 @@
 @use "@styles/abstracts/functions/gradient";
+@use "@styles/animations/gradient-keyframes";
 
 @mixin gradient-text($gradient, $direction: 90) {
     background-clip: text;
@@ -8,35 +9,11 @@
 }
 
 @mixin animated-gradient-text($gradient) {
+    $gradient-animation: gradient-keyframes 1s ease-in-out infinite alternate;
 
     @include gradient-text($gradient);
-    -webkit-animation: animation 800ms ease-in-out infinite alternate;
-    -moz-animation: animation 800ms ease-in-out infinite alternate;
-    animation: animation 800ms ease-in-out infinite alternate;
-    background-size: 200% 200%;
-
-    @-webkit-keyframes animation {
-        from {
-            background-position: 0% 0%;
-        }
-        to {
-            background-position: 100% 100%;
-        }
-    }
-    @-moz-keyframes animation {
-        from {
-            background-position: 0% 0%;
-        }
-        to {
-            background-position: 100% 100%;
-        }
-    }
-    @keyframes animation { 
-        from {
-            background-position: 0% 0%;
-        }
-        to {
-            background-position: 100% 100%;
-        }
-    }
+    -webkit-animation: $gradient-animation;
+    -moz-animation: $gradient-animation;
+    animation: $gradient-animation;
+    background-size: 150% 150%;
 }

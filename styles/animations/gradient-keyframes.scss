@@ -1,0 +1,11 @@
+@use "@styles/abstracts/mixins/misc";
+
+@-webkit-keyframes gradient-keyframes {
+    @include misc.change-position;
+}
+@-moz-keyframes gradient-keyframes {
+    @include misc.change-position;
+}
+@keyframes gradient-keyframes {
+    @include misc.change-position;
+}
