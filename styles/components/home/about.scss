@@ -15,15 +15,15 @@
         @include flex.flex($direction: column, $row: 10);
 
         .title {
-            @include gradient-text.gradientText(palette.$aquamarine);
-            @include font-size.fontSize(font-sizes.$heading, "large");
+            @include gradient-text.animated-gradient-text(palette.$aquamarine);
+            @include font-size.set-font-size(font-sizes.$heading, "large");
             font-weight: 800;
         }
 
         .content {
             color: palette.$white;
             font-weight: 500;
-            @include font-size.fontSize(font-sizes.$text);
+            @include font-size.set-font-size(font-sizes.$text);
         }
     }
 

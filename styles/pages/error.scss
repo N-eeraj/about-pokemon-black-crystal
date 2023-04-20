@@ -21,7 +21,7 @@
         .message {
             text-align: center;
             color: primary.$secondary-white;
-            @include font-size.fontSize(font-sizes.$text, "large");
+            @include font-size.set-font-size(font-sizes.$text, "large");
         }
 
         .redirect-btn {
@@ -29,7 +29,7 @@
             border-radius: 30px;
             background-color: primary.$accent;
             color: primary.$white;
-            @include font-size.fontSize(font-sizes.$button);
+            @include font-size.set-font-size(font-sizes.$button);
             font-weight: 600;
         }
     }

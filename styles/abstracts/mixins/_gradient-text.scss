@@ -1,8 +1,42 @@
 @use "@styles/abstracts/functions/gradient";
 
-@mixin gradientText($gradient, $direction: 90) {
+@mixin gradient-text($gradient, $direction: 90) {
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-image: gradient.linearGradient($gradient, $direction);
+}
+
+@mixin animated-gradient-text($gradient) {
+
+    @include gradient-text($gradient);
+    -webkit-animation: animation 800ms ease-in-out infinite alternate;
+    -moz-animation: animation 800ms ease-in-out infinite alternate;
+    animation: animation 800ms ease-in-out infinite alternate;
+    background-size: 200% 200%;
+
+    @-webkit-keyframes animation {
+        from {
+            background-position: 0% 0%;
+        }
+        to {
+            background-position: 100% 100%;
+        }
+    }
+    @-moz-keyframes animation {
+        from {
+            background-position: 0% 0%;
+        }
+        to {
+            background-position: 100% 100%;
+        }
+    }
+    @keyframes animation { 
+        from {
+            background-position: 0% 0%;
+        }
+        to {
+            background-position: 100% 100%;
+        }
+    }
 }

@@ -6,7 +6,7 @@
     border: 2px solid;
     border-radius: 7px;
     font-weight: 700;
-    @include font-size.fontSize(font-sizes.$button);
+    @include font-size.set-font-size(font-sizes.$button);
 
     @media (orientation: landscape) {
         padding: 5px 10px;

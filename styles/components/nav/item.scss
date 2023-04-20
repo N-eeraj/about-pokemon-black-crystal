@@ -8,7 +8,7 @@
     order: $order;
 
     .link-text {
-        @include gradient-text.gradientText($gradient, 100);
+        @include gradient-text.gradient-text($gradient, 100);
     }
 }
 
@@ -20,7 +20,7 @@
         height: 100%;
 
         .link-text {
-            @include font-size.fontSize(font-sizes.$text, "small");
+            @include font-size.set-font-size(font-sizes.$text, "small");
             font-weight: 600;
         }
     }

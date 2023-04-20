@@ -1,6 +1,6 @@
 @use "sass:map";
 
-@mixin fontSize($type, $size: "normal") {
+@mixin set-font-size($type, $size: "normal") {
 
     @media (orientation: portrait) {
         font-size: map.get($type, "sm", $size);

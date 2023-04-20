@@ -28,7 +28,7 @@
             .game-name {
                 font-family: font-families.$facon;
                 color: primary.$white;
-                @include font-size.fontSize(font-sizes.$heading);
+                @include font-size.set-font-size(font-sizes.$heading);
             }
         }
 
@@ -37,14 +37,14 @@
             color: primary.$white;
 
             .heading {
-                @include font-size.fontSize(font-sizes.$heading, "small");
+                @include font-size.set-font-size(font-sizes.$heading, "small");
                 text-shadow: 0 0 10px primary.$accent;
                 font-weight: 700;
                 text-transform: uppercase;
             }
 
             .content {
-                @include font-size.fontSize(font-sizes.$text, "small");
+                @include font-size.set-font-size(font-sizes.$text, "small");
             }
         }
 
