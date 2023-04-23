@@ -1,9 +1,11 @@
 <script setup>
 import { getInRange } from '@composables/random'
 
-const randomCharacter = computed(() => {
+const randomCharacter = ref(null)
+
+onMounted(() => {  
     const randomNumber = getInRange(0, 4)
-    return `/images/home/about/characters/character-${randomNumber}.gif`
+    randomCharacter.value = `images/home/about/characters/character-${randomNumber}.gif`
 })
 </script>
 
@@ -20,7 +22,7 @@ const randomCharacter = computed(() => {
 
         <div class="image-container">
             <img
-                :src="'/images/home/about/phone-frame.png'"
+                :src="'images/home/about/phone-frame.png'"
                 alt="Phone Frame"
                 class="phone-frame"
                 :style="`background-image: url(${randomCharacter});`" />
