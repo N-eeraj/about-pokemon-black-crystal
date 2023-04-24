@@ -12,9 +12,16 @@ const modes = [
     'carnival'
 ]
 
+const observerOptions = {
+    selector: '.mode-container',
+    delay: 100,
+    reset: true
+}
+
 onMounted(() => {  
     const randomNumber = getInRange(0, 4)
     randomCharacter.value = `images/home/about/characters/character-${randomNumber}.gif`
+    useObserver(observerOptions)
 })
 </script>
 

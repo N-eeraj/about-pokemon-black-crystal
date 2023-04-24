@@ -41,7 +41,16 @@
         }
 
         .mode-container {
-            transition: 1s;
+            top: 50%;
+            left: 50%;
+            opacity: 0;
+            transform: scale(0) translate(-50%, -50%);
+            
+            &.is-visible {
+                opacity: 1;
+                transform: scale(1);
+                transition: 1s;
+            }
         }
     }
 
@@ -60,7 +69,7 @@
                 border-radius: 20px;
             }
 
-            .mode-container.animate {
+            .mode-container.is-visible {
                 &:nth-of-type(1) {
                     top: 5%;
                     left: 12%;
@@ -108,7 +117,7 @@
                 border-radius: min(12%, 36px);
             }
 
-            .mode-container.animate {
+            .mode-container.is-visible {
                 &:nth-of-type(1) {
                     top: 10%;
                     left: 18%;
