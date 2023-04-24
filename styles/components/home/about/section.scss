@@ -1,18 +1,18 @@
 @use "@styles/abstracts/colors/palette";
 @use "@styles/abstracts/font/sizes" as font-sizes;
 @use "@styles/abstracts/mixins/font-size";
-@use "@styles/abstracts/mixins/flex";
+@use "@styles/abstracts/mixins/display";
 @use "@styles/abstracts/mixins/main-container";
 @use "@styles/abstracts/mixins/gradient-text";
 
 #about-game {
-    @include flex.flex($direction: column, $justify: center, $row: 25);
+    @include display.flex($direction: column, $justify: center, $row: 25);
     @include main-container.full-screen;
     @include main-container.container(0, 0);
     background-color: palette.$primary;
 
     .text-container {
-        @include flex.flex($direction: column, $row: 10);
+        @include display.flex($direction: column, $row: 10);
         width: 90%;
 
         .title {
@@ -30,8 +30,7 @@
 
     .image-container {
         position: relative;
-        display: grid;
-        place-items: center;
+        @include display.center;
 
         .phone-frame {
             background-color: palette.$white;

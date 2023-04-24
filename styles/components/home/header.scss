@@ -1,13 +1,13 @@
 @use "@styles/abstracts/colors/primary";
 @use "@styles/abstracts/font/sizes" as font-sizes;
 @use "@styles/abstracts/font/family" as font-families;
-@use "@styles/abstracts/mixins/flex";
+@use "@styles/abstracts/mixins/display";
 @use "@styles/abstracts/mixins/main-container";
 @use "@styles/abstracts/mixins/font-size";
 
 .header {
     position: relative;
-    @include flex.flex($direction: column, $justify: center);
+    @include display.flex($direction: column, $justify: center);
     @include main-container.full-screen;
     @include main-container.max-width-padding;
     background-image: url("@images/home/header/background.webp");
@@ -15,10 +15,10 @@
     background-position: center;
 
     .content-container {
-        @include flex.flex($direction: column, $justify: center, $row: 25);
+        @include display.flex($direction: column, $justify: center, $row: 25);
 
         .title {
-            @include flex.flex($direction: column, $row: 10);
+            @include display.flex($direction: column, $row: 10);
 
             .logo {
                 width: 200px;
@@ -33,7 +33,7 @@
         }
 
         .description {
-            @include flex.flex($direction: column, $row: 10);
+            @include display.flex($direction: column, $row: 10);
             color: primary.$white;
 
             .heading {
@@ -49,7 +49,7 @@
         }
 
         .cta-container {
-            @include flex.flex($direction: column, $row: 10, $col: 25);
+            @include display.flex($direction: column, $row: 10, $col: 25);
             width: 90%;
 
             .link-btn {

@@ -1,5 +1,5 @@
 @use "@styles/abstracts/colors/primary";
-@use "@styles/abstracts/mixins/flex";
+@use "@styles/abstracts/mixins/display";
 @use "@styles/abstracts/mixins/main-container";
 
 .nav-bar {
@@ -12,7 +12,7 @@
     z-index: 2;
     
     .nav-list {
-        @include flex.flex($justify: space-evenly);
+        @include display.flex($justify: space-evenly);
         height: 100%;
         list-style-type: none;
     }

@@ -1,10 +1,10 @@
 @use "@styles/abstracts/colors/palette";
+@use "@styles/abstracts/mixins/display";
 @use "@styles/abstracts/functions/gradient";
 
 .mode-container {
     position: absolute;
-    display: grid;
-    place-items: center;
+    @include display.center;
     backdrop-filter: blur(3px);
     border: 1px solid palette.$white;
     border-radius: 10px;
@@ -23,7 +23,7 @@
 
     .icon {
         position: relative;
-        width: 90%;
+        width: 80%;
         transition: 400ms;
         z-index: 1;
     }
