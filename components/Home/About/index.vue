@@ -1,18 +1,10 @@
 <script setup>
 import { getInRange } from '@composables/useRandom'
+import gameModes from '@data/gameModes'
 
 const randomCharacter = ref(null)
 
-const modes = [
-    'story',
-    'exploration',
-    'arcade',
-    'pvp',
-    'trade',
-    'carnival'
-]
-
-onMounted(() => {  
+onMounted(() => {
     const randomNumber = getInRange(0, 4)
     randomCharacter.value = `images/home/about/characters/character-${randomNumber}.gif`
 
@@ -38,13 +30,14 @@ onMounted(() => {
 
         <div class="image-container">
             <img
-                :src="'images/home/about/phone-frame.png'"
+                v-if="randomCharacter"
+                src="@images/home/about/phone-frame.png"
                 alt="Phone Frame"
                 class="phone-frame"
                 :style="`background-image: url(${randomCharacter});`" />
 
             <HomeAboutModeIcons
-                v-for="(mode, index) in modes"
+                v-for="(mode, index) in gameModes"
                 :mode="mode"
                 :key="index" />
         </div>

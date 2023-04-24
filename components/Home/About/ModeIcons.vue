@@ -11,6 +11,7 @@ defineProps({
     <div class="mode-container">
         <img
             :src="`images/home/about/mode-icons/${mode}.svg`"
+            :alt="mode"
             class="icon" />
     </div>
 </template>

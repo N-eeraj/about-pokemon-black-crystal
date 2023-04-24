@@ -8,6 +8,7 @@ export default defineNuxtConfig({
     modules: ['nuxt-icon'],
     alias: {
       '@composables': resolve(__dirname, './composables'),
+      '@data': resolve(__dirname, './data'),
       '@styles': resolve(__dirname, './styles'),
       '@images': resolve(__dirname, './public/images')
     }

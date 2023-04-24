@@ -1,8 +1,8 @@
-const useMeta = page => {
+const useMeta = (page?: string): void => {
     const title = 'Pokémon Black Crystal'
     const website = 'https://n-eeraj.github.io/about-pokemon-black-crystal'
     const description = `${title} is a free to play fan made online Pokémon game that you can play with your friends`
-    const image = `images/pokeball.png`
+    const image = `${website}/images/pokeball.png`
 
     useHead({
         title: page ? `${page} | ${title}` : title,
