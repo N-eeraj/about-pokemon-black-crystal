@@ -34,12 +34,14 @@
         place-items: center;
 
         .phone-frame {
-            width: 55%;
             background-color: palette.$white;
             background-size: contain;
             background-position: center;
             background-repeat: no-repeat;
-            border-radius: 30px;
+        }
+
+        .mode-container {
+            transition: 1s;
         }
     }
 
@@ -50,6 +52,40 @@
 
         .image-container {
             width: 95%;
+            height: 55%;
+
+            .phone-frame {
+                width: 45%;
+                height: 90%;
+                border-radius: 20px;
+            }
+
+            .mode-container.animate {
+                &:nth-of-type(1) {
+                    top: 5%;
+                    left: 12%;
+                }
+                &:nth-of-type(2) {
+                    top: -5%;
+                    left: 60%;
+                }
+                &:nth-of-type(3) {
+                    top: 25%;
+                    left: 75%;
+                }
+                &:nth-of-type(4) {
+                    top: 50%;
+                    left: 3%;
+                }
+                &:nth-of-type(5) {
+                    top: 65%;
+                    left: 65%;
+                }
+                &:nth-of-type(6) {
+                    top: 80%;
+                    left: 25%;
+                }
+            }
         }
     }
 
@@ -70,6 +106,33 @@
                 width: unset;
                 height: 60dvh;
                 border-radius: min(12%, 36px);
+            }
+
+            .mode-container.animate {
+                &:nth-of-type(1) {
+                    top: 10%;
+                    left: 18%;
+                }
+                &:nth-of-type(2) {
+                    top: 3%;
+                    left: 55%;
+                }
+                &:nth-of-type(3) {
+                    top: 25%;
+                    left: 72%;
+                }
+                &:nth-of-type(4) {
+                    top: 45%;
+                    left: 8%;
+                }
+                &:nth-of-type(5) {
+                    top: 60%;
+                    left: 62%;
+                }
+                &:nth-of-type(6) {
+                    top: 78%;
+                    left: 32%;
+                }
             }
         }
     }
