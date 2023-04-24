@@ -1,5 +1,5 @@
 <script setup>
-import { getInRange } from '@composables/random'
+import { getInRange } from '@composables/useRandom'
 
 const randomCharacter = ref(null)
 
@@ -12,15 +12,15 @@ const modes = [
     'carnival'
 ]
 
-const observerOptions = {
-    selector: '.mode-container',
-    delay: 100,
-    reset: true
-}
-
 onMounted(() => {  
     const randomNumber = getInRange(0, 4)
     randomCharacter.value = `images/home/about/characters/character-${randomNumber}.gif`
+
+    const observerOptions = {
+        selector: '.mode-container',
+        reset: true,
+        delay: 100
+    }
     useObserver(observerOptions)
 })
 </script>
