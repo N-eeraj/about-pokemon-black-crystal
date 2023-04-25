@@ -6,7 +6,7 @@
 @use "@styles/abstracts/mixins/gradient-text";
 
 #pokemon {
-    @include display.flex($direction: column, $justify: center, $row: 25);
+    @include display.flex($direction: column, $justify: center, $row: 50);
     @include main-container.full-screen;
     @include main-container.container(0, 5%);
     background-color: palette.$white;
@@ -20,9 +20,12 @@
         background-repeat: no-repeat;
     }
 
+    .text-container, .image {
+        z-index: 1;
+    }
+
     .text-container {
         @include display.flex($direction: column, $align: flex-start, $row: 15);
-        z-index: 1;
 
         .title {
             width: 100%;
@@ -35,6 +38,7 @@
         }
 
         .content-container {
+            @include display.flex($direction: column, $align: flex-start, $row: 5);
             font-weight: 500;
             @include font-size.set-font-size(font-sizes.$text);
         }
@@ -48,10 +52,13 @@
         }
 
         .text-container {
-
             .title {
                 text-align: center;
             }
+        }
+
+        .pokemon {
+            width: 99vw;
         }
     }
 
@@ -64,6 +71,10 @@
 
         .text-container {
             width: 50%;
+        }
+
+        .pokemon {
+            display: none;
         }
     }
 }

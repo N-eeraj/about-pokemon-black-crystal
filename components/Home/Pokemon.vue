@@ -1,9 +1,44 @@
+<script setup>
+const count = ref(0)
+
+const handleCountPokemon = () => {
+    let counterStarted = false
+    const maxCount = 300
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting && !counterStarted) {
+                counterStarted = true
+                const pokemonCountInterval = setInterval(() => {
+                    if (maxCount < count.value) {
+                        clearInterval(pokemonCountInterval)
+                        count.value = `${maxCount}+`
+                    }
+                    else
+                        count.value += 21
+                }, 25)
+            }
+            else {
+                count.value = 0
+                counterStarted = false
+            }
+        })
+    })
+
+    observer.observe(document.getElementById('pokemon'))
+}
+
+onMounted(() => {
+    handleCountPokemon()
+})
+</script>
+
 <template>
     <section id="pokemon">
         <div class="text-container">
             <h1 class="title">
                 <span class="count">
-                    300+
+                    {{ count }}
                 </span>
                 Pokémon
             </h1>
@@ -27,12 +62,12 @@
                 </p>
             </article>
         </div>
-<!-- 
+
         <img
-            src="@images/home/about/phone-frame.png"
-            alt="Phone Frame"
-            class="phone-frame" />
-        <img
+            src="@images/home/pokemon.png"
+            alt="Pokemon"
+            class="image pokemon" />
+        <!-- <img
             src="@images/home/about/phone-frame.png"
             alt="Phone Frame"
             class="phone-frame" /> -->
