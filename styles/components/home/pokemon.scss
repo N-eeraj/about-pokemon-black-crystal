@@ -1,0 +1,69 @@
+@use "@styles/abstracts/colors/palette";
+@use "@styles/abstracts/font/sizes" as font-sizes;
+@use "@styles/abstracts/mixins/font-size";
+@use "@styles/abstracts/mixins/display";
+@use "@styles/abstracts/mixins/main-container";
+@use "@styles/abstracts/mixins/gradient-text";
+
+#pokemon {
+    @include display.flex($direction: column, $justify: center, $row: 25);
+    @include main-container.full-screen;
+    @include main-container.container(0, 5%);
+    background-color: palette.$white;
+
+    &::before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-image: url("@images/mode-icons/exploration.svg");
+        background-repeat: no-repeat;
+    }
+
+    .text-container {
+        @include display.flex($direction: column, $align: flex-start, $row: 15);
+        z-index: 1;
+
+        .title {
+            width: 100%;
+            @include font-size.set-font-size(font-sizes.$heading, "large");
+            font-weight: 800;
+
+            .count {
+                @include gradient-text.animated-gradient-text(palette.$amber);
+            }
+        }
+
+        .content-container {
+            font-weight: 500;
+            @include font-size.set-font-size(font-sizes.$text);
+        }
+    }
+
+    @media (orientation: portrait) {
+        &::before {
+            background-size: 90%;
+            background-position: center;
+            opacity: 0.1;
+        }
+
+        .text-container {
+
+            .title {
+                text-align: center;
+            }
+        }
+    }
+
+    @media (orientation: landscape) {
+        &::before {
+            background-size: 75% 75%;
+            background-position: left 80%;
+            opacity: 0.3;
+        }
+
+        .text-container {
+            width: 50%;
+        }
+    }
+}

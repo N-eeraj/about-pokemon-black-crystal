@@ -10,7 +10,7 @@ defineProps({
 <template>
     <div class="mode-container">
         <img
-            :src="`images/home/about/mode-icons/${mode}.svg`"
+            :src="`images/mode-icons/${mode}.svg`"
             :alt="mode"
             class="icon" />
     </div>

@@ -5,4 +5,5 @@ useMeta()
 <template>
   <HomeHeader />
   <HomeAbout />
+  <HomePokemon />
 </template>
