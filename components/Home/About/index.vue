@@ -4,16 +4,23 @@ import gameModes from '@data/gameModes'
 
 const randomCharacter = ref(null)
 
-onMounted(() => {
+const handleRandomImage = () => {
     const randomNumber = getInRange(0, 4)
     randomCharacter.value = `images/home/about/characters/character-${randomNumber}.gif`
+}
 
+const handleObserver = () => {
     const observerOptions = {
         selector: '.mode-container',
         reset: true,
         delay: 100
     }
     useObserver(observerOptions)
+}
+
+onMounted(() => {
+    handleRandomImage()
+    handleObserver()
 })
 </script>
 

@@ -1,5 +1,9 @@
 <script setup>
+import { getInRange } from '@composables/useRandom'
+import pokemonCards from '@data/pokemonCards'
+
 const count = ref(0)
+const randomPokemonImage = ref(null)
 
 const handleCountPokemon = () => {
     let counterStarted = false
@@ -28,7 +32,13 @@ const handleCountPokemon = () => {
     observer.observe(document.getElementById('pokemon'))
 }
 
+const handleRandomPokemon = () => {
+    const randomPokemonName = pokemonCards[getInRange(0, pokemonCards.length)]
+    randomPokemonImage.value = `images/home/pokemon/cards/${randomPokemonName}.png`
+}
+
 onMounted(() => {
+    handleRandomPokemon()
     handleCountPokemon()
 })
 </script>
@@ -64,13 +74,13 @@ onMounted(() => {
         </div>
 
         <img
-            src="@images/home/pokemon.png"
+            src="@images/home/pokemon/group.png"
             alt="Pokemon"
             class="image pokemon" />
-        <!-- <img
-            src="@images/home/about/phone-frame.png"
-            alt="Phone Frame"
-            class="phone-frame" /> -->
+        <img
+            :src="randomPokemonImage"
+            :alt="randomPokemonImage"
+            class="image pokemon-card" />
     </section>
 </template>
 

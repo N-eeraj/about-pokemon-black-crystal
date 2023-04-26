@@ -6,6 +6,7 @@
 @use "@styles/abstracts/mixins/gradient-text";
 
 #pokemon {
+    position: relative;
     @include display.flex($direction: column, $justify: center, $row: 50);
     @include main-container.full-screen;
     @include main-container.container(0, 5%);
@@ -14,6 +15,7 @@
     &::before {
         content: '';
         position: absolute;
+        top: 0;
         width: 100%;
         height: 100%;
         background-image: url("@images/mode-icons/exploration.svg");
@@ -60,9 +62,16 @@
         .pokemon {
             width: 99vw;
         }
+
+        .pokemon-card {
+            display: none;
+        }
     }
 
     @media (orientation: landscape) {
+        flex-direction: row;
+        justify-content: space-around;
+
         &::before {
             background-size: 75% 75%;
             background-position: left 80%;
@@ -75,6 +84,12 @@
 
         .pokemon {
             display: none;
+        }
+
+        .pokemon-card {
+            height: 80%;
+            object-fit: contain;
+            border-radius: 10px;
         }
     }
 }
