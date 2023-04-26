@@ -19,8 +19,8 @@ const handleCountPokemon = () => {
                         count.value = `${maxCount}+`
                     }
                     else
-                        count.value += 21
-                }, 25)
+                        count.value += 9
+                }, 30)
             }
             else {
                 count.value = 0

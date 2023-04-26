@@ -6,4 +6,5 @@ useMeta()
   <HomeHeader />
   <HomeAbout />
   <HomePokemon />
+  <HomeStoryMode />
 </template>
