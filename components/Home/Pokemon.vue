@@ -14,7 +14,7 @@ const handleCountPokemon = () => {
             if (entry.isIntersecting && !counterStarted) {
                 counterStarted = true
                 const pokemonCountInterval = setInterval(() => {
-                    if (maxCount < count.value) {
+                    if (maxCount < count.value || count.value === `${maxCount}+`) {
                         clearInterval(pokemonCountInterval)
                         count.value = `${maxCount}+`
                     }
@@ -29,7 +29,7 @@ const handleCountPokemon = () => {
         })
     })
 
-    observer.observe(document.getElementById('pokemon'))
+    observer.observe(document.querySelector('#pokemon .count'))
 }
 
 const handleRandomPokemon = () => {
