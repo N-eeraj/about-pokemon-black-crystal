@@ -21,13 +21,14 @@ const opponentsImage = computed(() => `images/home/opponents/${props.image}.png`
     <article class="content">
         <img
             :src="opponentsImage"
-            alt="image">
+            alt="image"
+            class="image">
 
         <div class="text-container">
-            <h3>
+            <h3 class="title">
                 {{ title }}
             </h3>
-            <p>
+            <p class="body">
                 {{ body }}
             </p>
         </div>

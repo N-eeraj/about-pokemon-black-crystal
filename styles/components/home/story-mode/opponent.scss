@@ -1,3 +1,7 @@
+@use "@styles/abstracts/colors/primary";
+@use "@styles/abstracts/font/sizes" as font-sizes;
+@use "@styles/abstracts/mixins/display";
+@use "@styles/abstracts/mixins/font-size";
 @use "@styles/animations/fade";
 
 .content {
@@ -20,5 +24,29 @@
     &:nth-of-type(2) {
     }
     &:last-of-type {
+    }
+    
+
+    .text-container {
+        @include display.flex($direction: column, $align: flex-start, $row: 5);
+        
+        .title {
+            @include font-size.set-font-size(font-sizes.$heading, "medium");
+            font-weight: 700;
+            color: primary.$white;
+        }
+        
+        .body {
+            @include font-size.set-font-size(font-sizes.$text);
+            color: primary.$secondary-white;
+        }
+    }
+
+    @media (orientation: portrait) {
+        .image {
+            width: 100%;
+            height: 70%;
+            object-fit: contain;
+        }
     }
 }
