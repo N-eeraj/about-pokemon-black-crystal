@@ -31,8 +31,9 @@ margin-bottom: 100vh; // remove
             width: 100%;
             height: 100%;
 
+            &.active {
                 display: flex;
-                animation: fade 1s;
+                animation: fade 2s;
             }
         }
     }
