@@ -1,5 +1,5 @@
 <script setup>
-defineProps({
+const props = defineProps({
     title: {
         type: String,
         required: true
@@ -13,13 +13,24 @@ defineProps({
         required: true
     }
 })
+
+const opponentsImage = computed(() => `images/home/opponents/${props.image}.png`)
 </script>
 
 <template>
     <article class="content">
-        {{ title }}
-        {{ body }}
-        {{ image }}
+        <img
+            :src="opponentsImage"
+            alt="image">
+
+        <div class="text-container">
+            <h3>
+                {{ title }}
+            </h3>
+            <p>
+                {{ body }}
+            </p>
+        </div>
     </article>
 </template>
 

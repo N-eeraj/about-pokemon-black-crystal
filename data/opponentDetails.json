@@ -2,16 +2,16 @@
     {
         "title": "Trainer Battles",
         "body": "Battle against over 200 Pokémon trainers in your journey in becoming the champion.",
-        "image": ""
+        "image": "trainers"
     },
     {
         "title": "Gym Challenges",
         "body": "Defeat Gym Leaders to receive Gym Badges. Collect all eight Gym Badges to compete in the Pokémon League.",
-        "image": ""
+        "image": "gym-leaders"
     },
     {
         "title": "League Champion",
         "body": "Battle against the highest-level trainers - the Elite Four and the Champion.",
-        "image": ""
+        "image": "elite-four"
     }
 ]

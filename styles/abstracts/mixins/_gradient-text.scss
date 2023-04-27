@@ -1,15 +1,15 @@
-@use "@styles/abstracts/functions/gradient";
-@use "@styles/animations/gradient" as animation;
+@use "@styles/abstracts/functions/gradient" as createGradient;
+@use "@styles/animations/gradient";
 
 @mixin gradient-text($gradient, $direction: 90) {
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    background-image: gradient.linearGradient($gradient, $direction);
+    background-image: createGradient.linearGradient($gradient, $direction);
 }
 
 @mixin animated-gradient-text($gradient) {
-    $gradient-animation: animation 1s ease-in-out infinite alternate;
+    $gradient-animation: gradient-keyframes 1s ease-in-out infinite alternate;
 
     @include gradient-text($gradient);
     -webkit-animation: $gradient-animation;
