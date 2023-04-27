@@ -1,5 +1,5 @@
 @use "@styles/abstracts/functions/gradient";
-@use "@styles/animations/gradient-keyframes";
+@use "@styles/animations/gradient" as animation;
 
 @mixin gradient-text($gradient, $direction: 90) {
     background-clip: text;
@@ -9,7 +9,7 @@
 }
 
 @mixin animated-gradient-text($gradient) {
-    $gradient-animation: gradient-keyframes 1s ease-in-out infinite alternate;
+    $gradient-animation: animation 1s ease-in-out infinite alternate;
 
     @include gradient-text($gradient);
     -webkit-animation: $gradient-animation;
