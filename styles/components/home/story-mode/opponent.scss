@@ -6,26 +6,30 @@
 
 .content {
     position: absolute;
+    @include display.flex($direction: column);
     display: none;
     width: 100%;
     height: 100%;
 
     &.show {
-        $fade-animation: fade 2s;
+        display: flex;
 
-        display: block;
-        -webkit-animation: $fade-animation;
-        -moz-animation: $fade-animation;
-        animation: $fade-animation;
-    }
+        .text-container {
+            $fade-up-animation: fade-up 1s;
+            
+            -webkit-animation: $fade-up-animation;
+            -moz-animation: $fade-up-animation;
+            animation: $fade-up-animation;
+        }
 
-    &:first-of-type {
+        .image {
+            $fade-animation: fade 1s;
+            
+            -webkit-animation: $fade-animation;
+            -moz-animation: $fade-animation;
+            animation: $fade-animation;
+        }
     }
-    &:nth-of-type(2) {
-    }
-    &:last-of-type {
-    }
-    
 
     .text-container {
         @include display.flex($direction: column, $align: flex-start, $row: 5);
@@ -42,11 +46,36 @@
         }
     }
 
+    .image {
+        object-fit: contain;
+    }
+
     @media (orientation: portrait) {
         .image {
             width: 100%;
             height: 70%;
-            object-fit: contain;
+        }
+    }
+
+    @media (orientation: landscape) {
+        flex-direction: row;
+        justify-content: space-between;
+
+
+        &:first-of-type {
+            align-items: flex-end;
+        }
+        &:last-of-type {
+            align-items: flex-start;
+        }
+
+        .text-container {
+            width: 50%;
+        }
+
+        .image {
+            width: 45%;
+            height: 100%;
         }
     }
 }

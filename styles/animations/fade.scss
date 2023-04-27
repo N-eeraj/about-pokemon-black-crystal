@@ -1,6 +1,15 @@
 @mixin toggle-fade {
     from {
         opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@mixin toggle-fade-up {
+    from {
+        opacity: 0;
         transform: translateY(30px);
     }
     to {
@@ -17,4 +26,14 @@
 }
 @keyframes fade {
     @include toggle-fade;
+}
+
+@-webkit-keyframes fade-up {
+    @include toggle-fade-up;
+}
+@-moz-keyframes fade-up {
+    @include toggle-fade-up;
+}
+@keyframes fade-up {
+    @include toggle-fade-up;
 }
