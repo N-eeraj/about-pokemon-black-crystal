@@ -1,0 +1,24 @@
+@use "@styles/animations/fade";
+
+.content {
+    position: absolute;
+    display: none;
+    width: 100%;
+    height: 100%;
+
+    &.show {
+        $fade-animation: fade 2s;
+
+        display: block;
+        -webkit-animation: $fade-animation;
+        -moz-animation: $fade-animation;
+        animation: $fade-animation;
+    }
+
+    &:first-of-type {
+    }
+    &:nth-of-type(2) {
+    }
+    &:last-of-type {
+    }
+}

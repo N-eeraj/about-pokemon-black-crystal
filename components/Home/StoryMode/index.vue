@@ -1,5 +1,6 @@
 
 <script setup>
+import opponentDetails from '@data/opponentDetails'
 
 const active = ref(0)
 
@@ -28,18 +29,13 @@ onBeforeUnmount(() => {
         </h1>
 
         <div class="content-container">
-            <article
-                class="content"
-                :class="{ active: active === 0 }">
-            </article>
-            <article
-                class="content"
-                :class="{ active: active === 1 }">
-            </article>
-            <article
-                class="content"
-                :class="{ active: active === 2 }">
-            </article>
+            <HomeStoryModeOpponent
+                v-for="({title, body, image}, index) in opponentDetails"
+                :title="title"
+                :body="body"
+                :image="image"
+                :class="{ show: active === index }"
+                :key="index" />
         </div>
     </section>
 </template>

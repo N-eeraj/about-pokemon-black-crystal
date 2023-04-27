@@ -4,7 +4,6 @@
 @use "@styles/abstracts/mixins/display";
 @use "@styles/abstracts/mixins/main-container";
 @use "@styles/abstracts/mixins/gradient-text";
-@use "@styles/animations/fade";
 
 #story-mode {
     position: relative;
@@ -24,21 +23,6 @@
     .content-container {
         position: sticky;
         width: 100%;
-
-        .content {
-            position: absolute;
-            display: none;
-            width: 100%;
-            height: 100%;
-
-            &.show {
-                $fade-animation: fade 2s;
-
-                -webkit-animation: $fade-animation;
-                -moz-animation: $fade-animation;
-                animation: $fade-animation;
-            }
-        }
     }
 
     @media (orientation: portrait) {
