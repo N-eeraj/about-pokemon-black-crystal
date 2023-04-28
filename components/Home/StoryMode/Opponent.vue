@@ -24,14 +24,14 @@ const opponentsImage = computed(() => `images/home/opponents/${props.image}.png`
             alt="image"
             class="image">
 
-        <div class="text-container">
+        <article class="text-container">
             <h3 class="title">
                 {{ title }}
             </h3>
             <p class="body">
                 {{ body }}
             </p>
-        </div>
+        </article>
     </article>
 </template>
 

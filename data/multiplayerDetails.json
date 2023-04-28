@@ -1,0 +1,10 @@
+[
+    {
+        "name": "PVP",
+        "description": "Challenge your friends for a Pokémon trainer battle"
+    },
+    {
+        "name": "Trade",
+        "description": "Trade your Pokémon with other Pokémon trainers"
+    }
+]

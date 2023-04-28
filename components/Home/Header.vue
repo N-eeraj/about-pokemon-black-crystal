@@ -11,14 +11,14 @@
                 </h3>
             </div>
 
-            <div class="description">
+            <article class="description">
                 <h2 class="heading">
                     Gotta catch 'em all!
                 </h2>
                 <p class="content">
                     Become a Pokémon trainer, overcome challenges & become a Pokémon master.
                 </p>
-            </div>
+            </article>
 
             <div class="cta-container">
                 <LinkButton

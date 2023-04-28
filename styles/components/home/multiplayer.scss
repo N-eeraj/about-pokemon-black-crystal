@@ -7,7 +7,7 @@
 
 #multiplayer {
     position: relative;
-    // @include display.flex($direction: column, $justify: center, $row: 50);
+    @include display.flex($direction: column, $justify: center, $row: 50);
     @include main-container.full-screen;
     @include main-container.container(0, 5%);
     background-image: gradient.linearGradient(palette.$tanzanite, $opacity: 0.3);
@@ -21,6 +21,10 @@
         height: 100%;
         background-image: url("@images/home/multiplayer/background.png");
         background-repeat: no-repeat;
+    }
+
+    * {
+        z-index: 1;
     }
 
     @media (orientation: portrait) {
