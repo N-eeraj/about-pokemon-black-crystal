@@ -25,6 +25,7 @@
         height: 100%;
         background-image: url("@images/home/multiplayer/background.png");
         background-repeat: no-repeat;
+        background-position: center;
         -webkit-animation: $spin-animation;
         -moz-animation: $spin-animation;
         animation: $spin-animation;
@@ -43,23 +44,26 @@
 
     .image {
         width: 100%;
+        object-fit: contain;
     }
 
     .text-conainer {
         @include display.flex($direction: column, $row: 10);
 
         .mode {
-            @include display.flex($direction: column, $align: flex-start, $row: 5);
+            @include display.flex($direction: column, $row: 5);
 
             .sub-title {
+                width: 100%;
                 color: palette.$primary;
                 @include font-size.set-font-size(font-sizes.$heading, "small");
                 font-weight: 700;
             }
-
+            
             .description {
                 color: palette.$secondary;
                 @include font-size.set-font-size(font-sizes.$text);
+                font-weight: 600;
             }
         }
     }
@@ -67,16 +71,37 @@
     @media (orientation: portrait) {
         &::before {
             background-size: 90% auto;
-            background-position: center;
         }
     }
 
     @media (orientation: landscape) {
+        row-gap: 10px;
+
         &::before {
             background-size: auto 80%;
-            background-position: center 80%;
         }
 
+        .image {
+            height: 45dvh;
+        }
 
+        .text-conainer {
+            flex-direction: row;
+            justify-content: space-between;
+
+            .mode:last-of-type {
+                text-align: end;
+            }
+        }
+    }
+
+    @media (orientation: landscape) and (min-width: 1000px) {
+        .text-conainer {
+            width: min(800px, 100%);
+
+            .mode {
+                width: min(50%, 480px);
+            }
+        }
     }
 }
