@@ -26,7 +26,7 @@
     @media (orientation: landscape) {
         top: 0;
         @include main-container.max-width-padding;
-        background-color: rgba($color: primary.$primary, $alpha: 0.9);
+        background-color: rgba(primary.$primary, 0.9);
         transition: 400ms;
 
         &.at-top {

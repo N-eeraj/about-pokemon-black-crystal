@@ -1,12 +1,39 @@
-@use "@styles/abstracts/colors/primary";
+@use "@styles/abstracts/colors/palette";
 @use "@styles/abstracts/font/sizes" as font-sizes;
 @use "@styles/abstracts/mixins/font-size";
 @use "@styles/abstracts/mixins/display";
 @use "@styles/abstracts/mixins/main-container";
+@use "@styles/abstracts/functions/gradient";
 
 #multiplayer {
+    position: relative;
     // @include display.flex($direction: column, $justify: center, $row: 50);
     @include main-container.full-screen;
     @include main-container.container(0, 5%);
-    // background-color: primary.$white;
+    background-image: gradient.linearGradient(palette.$tanzanite, $opacity: 0.3);
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url("@images/home/multiplayer/background.png");
+        background-repeat: no-repeat;
+    }
+
+    @media (orientation: portrait) {
+        &::before {
+            background-size: 90% auto;
+            background-position: center;
+        }
+    }
+
+    @media (orientation: landscape) {
+        &::before {
+            background-size: auto 80%;
+            background-position: center 80%;
+        }
+    }
 }
