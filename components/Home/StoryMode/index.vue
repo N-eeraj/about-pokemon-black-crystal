@@ -8,8 +8,8 @@ const upadateActive = () => {
     const offset = document.getElementById('story-mode').offsetTop
     const scrollY = window.scrollY
     const height = window.innerHeight
-    if (scrollY < offset) return
 
+    if (scrollY < offset) return
     active.value = Math.round((scrollY - offset) / height)
 }
 

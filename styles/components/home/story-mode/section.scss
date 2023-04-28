@@ -23,6 +23,7 @@
     .content-container {
         position: sticky;
         width: 100%;
+        background-color: palette.$primary;
     }
 
     @media (orientation: portrait) {
