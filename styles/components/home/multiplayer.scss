@@ -4,15 +4,19 @@
 @use "@styles/abstracts/mixins/display";
 @use "@styles/abstracts/mixins/main-container";
 @use "@styles/abstracts/functions/gradient";
+@use "@styles/animations/spin";
 
 #multiplayer {
     position: relative;
-    @include display.flex($direction: column, $justify: center, $row: 50);
+    @include display.flex($direction: column, $justify: center, $row: 30);
     @include main-container.full-screen;
     @include main-container.container(0, 5%);
     background-image: gradient.linearGradient(palette.$tanzanite, $opacity: 0.3);
+    overflow: hidden;
 
     &::before {
+        $spin-animation: spin-keyframes 10s ease-in-out infinite alternate;
+
         content: '';
         position: absolute;
         top: 0;
@@ -21,10 +25,43 @@
         height: 100%;
         background-image: url("@images/home/multiplayer/background.png");
         background-repeat: no-repeat;
+        -webkit-animation: $spin-animation;
+        -moz-animation: $spin-animation;
+        animation: $spin-animation;
     }
 
     * {
         z-index: 1;
+    }
+
+    .title {
+        color: palette.$primary;
+        @include font-size.set-font-size(font-sizes.$heading, "large");
+        text-align: center;
+        font-weight: 800;
+    }
+
+    .image {
+        width: 100%;
+    }
+
+    .text-conainer {
+        @include display.flex($direction: column, $row: 10);
+
+        .mode {
+            @include display.flex($direction: column, $align: flex-start, $row: 5);
+
+            .sub-title {
+                color: palette.$primary;
+                @include font-size.set-font-size(font-sizes.$heading, "small");
+                font-weight: 700;
+            }
+
+            .description {
+                color: palette.$secondary;
+                @include font-size.set-font-size(font-sizes.$text);
+            }
+        }
     }
 
     @media (orientation: portrait) {
@@ -39,5 +76,7 @@
             background-size: auto 80%;
             background-position: center 80%;
         }
+
+
     }
 }

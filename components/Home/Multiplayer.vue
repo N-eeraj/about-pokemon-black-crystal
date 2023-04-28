@@ -18,10 +18,10 @@ import multiplayerDetails from '@data/multiplayerDetails'
                 v-for="({name, description}, index) in multiplayerDetails"
                 class="mode"
                 :key="index">
-                <h3>
+                <h3 class="sub-title">
                     {{ name }}
                 </h3>
-                <p>
+                <p class="description">
                     {{ description }}
                 </p>
             </article>

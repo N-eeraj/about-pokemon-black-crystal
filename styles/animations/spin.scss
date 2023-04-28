@@ -1,0 +1,18 @@
+@mixin rotate {
+    from {
+        transform: rotate(0);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@-webkit-keyframes spin-keyframes {
+    @include rotate;
+}
+@-moz-keyframes spin-keyframes {
+    @include rotate;
+}
+@keyframes spin-keyframes {
+    @include rotate;
+}
