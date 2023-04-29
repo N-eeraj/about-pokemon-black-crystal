@@ -2,6 +2,7 @@
 @use "@styles/abstracts/font/sizes" as font-sizes;
 @use "@styles/abstracts/mixins/display";
 @use "@styles/abstracts/mixins/font-size";
+@use "@styles/abstracts/mixins/animation";
 @use "@styles/animations/fade";
 
 .content {
@@ -15,19 +16,11 @@
         display: flex;
 
         .text-container {
-            $fade-up-animation: fade-up 1s;
-            
-            -webkit-animation: $fade-up-animation;
-            -moz-animation: $fade-up-animation;
-            animation: $fade-up-animation;
+            @include animation.animate(fade-up 1s);
         }
 
         .image {
-            $fade-animation: fade 1s;
-            
-            -webkit-animation: $fade-animation;
-            -moz-animation: $fade-animation;
-            animation: $fade-animation;
+            @include animation.animate(fade 1s);
         }
     }
 

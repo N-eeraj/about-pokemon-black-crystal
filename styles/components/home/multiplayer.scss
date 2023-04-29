@@ -3,6 +3,7 @@
 @use "@styles/abstracts/mixins/font-size";
 @use "@styles/abstracts/mixins/display";
 @use "@styles/abstracts/mixins/main-container";
+@use "@styles/abstracts/mixins/animation";
 @use "@styles/abstracts/functions/gradient";
 @use "@styles/animations/spin";
 
@@ -15,8 +16,6 @@
     overflow: hidden;
 
     &::before {
-        $spin-animation: spin-keyframes 10s ease-in-out infinite alternate;
-
         content: '';
         position: absolute;
         top: 0;
@@ -26,9 +25,7 @@
         background-image: url("@images/home/multiplayer/background.png");
         background-repeat: no-repeat;
         background-position: center;
-        -webkit-animation: $spin-animation;
-        -moz-animation: $spin-animation;
-        animation: $spin-animation;
+        @include animation.animate(spin-keyframes 10s ease-in-out infinite alternate);
     }
 
     * {
