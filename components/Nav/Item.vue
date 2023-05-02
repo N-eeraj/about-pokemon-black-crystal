@@ -16,9 +16,7 @@ defineProps({
 </script>
 
 <template>
-    <li
-        class="nav-item"
-        :class="icon">
+    <li class="nav-item">
         <NuxtLink
             :to="to"
             class="nav-link">

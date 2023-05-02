@@ -13,7 +13,8 @@ const navBar = useAtTop()
                 :to="to"
                 :text="text"
                 :icon="icon"
-                :key="index" />
+                :key="index"
+                :class="icon" />
         </ul>
     </nav>
 </template>
