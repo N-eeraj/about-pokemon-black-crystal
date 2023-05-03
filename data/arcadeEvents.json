@@ -1,0 +1,17 @@
+[
+    {
+        "icon": "battle",
+        "title": "Battle",
+        "description": "Battle against a trainer with 6 Pokémon, each of whose strength matches that of your strongest Pokémon."
+    },
+    {
+        "icon": "tent",
+        "title": "Tent",
+        "description": "Choose 3 mystery Pokémon among 6 to battle against the other 3. Your decision can change the tide of the battle!"
+    },
+    {
+        "icon": "tower",
+        "title": "Tower",
+        "description": "Battle against some very strong trainers back to back. Earn bigger rewards as you progress. How far can you keep going?"
+    }
+]

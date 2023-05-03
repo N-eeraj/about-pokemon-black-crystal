@@ -1,0 +1,57 @@
+@use "@styles/abstracts/colors/palette";
+@use "@styles/abstracts/font/sizes" as font-sizes;
+@use "@styles/abstracts/mixins/font-size";
+@use "@styles/abstracts/mixins/display";
+@use "@styles/abstracts/functions/gradient";
+
+.card {
+    position: relative;
+    @include display.flex($justify: space-around);
+    padding: 10px;
+    border-radius: 10px;
+    
+    &.battle {
+        background-image: gradient.linearGradient(palette.$grass);
+    }
+    &.tent {
+        background-image: gradient.linearGradient(palette.$fire);
+    }
+    &.tower {
+        background-image: gradient.linearGradient(palette.$water);
+    }
+    
+    &::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 99%;
+        height: 99%;
+        transform: translate(-50%, -50%);
+        background-color: palette.$secondary;
+        border-radius: 10px;
+    }
+
+    * {
+        position: relative;
+    }
+
+    .icon {
+        width: 50px;
+        height: 50px;
+        object-fit: contain;
+    }
+
+    .text-container {
+        width: 70%;
+        
+        .sub-title {
+            color: palette.$white;
+            @include font-size.set-font-size(font-sizes.$heading, "small");
+        }
+        .description {
+            color: palette.$secondary-white;
+            @include font-size.set-font-size(font-sizes.$text, "small");
+        }
+    }
+}

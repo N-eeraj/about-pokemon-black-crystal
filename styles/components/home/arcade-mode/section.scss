@@ -7,8 +7,9 @@
 #arcade-mode {
     position: relative;
     @include display.flex($direction: column, $justify: center, $row: 25);
-    @include main-container.full-screen;
-    @include main-container.container(0, 5%);
+    width: 100%;
+    min-height: 100dvh;
+    @include main-container.container(30px, 5%);
     background-color: palette.$primary;
 
     .text-container {
@@ -27,6 +28,10 @@
             @include font-size.set-font-size(font-sizes.$text);
             text-align: center;
         }
+    }
+
+    .event-container {
+        @include display.flex($direction: column, $row: 15);
     }
 
     @media (orientation: landscape) {
