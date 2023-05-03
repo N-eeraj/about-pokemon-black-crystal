@@ -8,4 +8,5 @@ useMeta()
   <HomePokemon />
   <HomeStoryMode />
   <HomeMultiplayer />
+  <HomeArcadeMode />
 </template>

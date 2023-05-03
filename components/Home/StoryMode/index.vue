@@ -10,7 +10,7 @@ const upadateActive = () => {
     const height = window.innerHeight
 
     if (scrollY < offset) return
-    active.value = Math.round((scrollY - offset) / height)
+    active.value = Math.min(Math.round((scrollY - offset) / height), 2)
 }
 
 onMounted(() => {
@@ -24,9 +24,9 @@ onBeforeUnmount(() => {
 
 <template>
     <section id="story-mode">
-        <h1 class="title">
+        <h2 class="title">
             Story Mode
-        </h1>
+        </h2>
 
         <div class="content-container">
             <HomeStoryModeOpponent

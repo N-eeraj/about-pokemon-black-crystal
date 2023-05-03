@@ -27,9 +27,9 @@ onMounted(() => {
 <template>
     <section id="about-game">
         <div class="text-container">
-            <h1 class="title">
+            <h2 class="title">
                 Explore the World of Pokémon
-            </h1>
+            </h2>
             <article class="content">
                 This game offers 6 unique modes for you to experience. Play with, use in combat, and capture various Pokémon.
             </article>

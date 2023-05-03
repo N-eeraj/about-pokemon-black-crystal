@@ -1,0 +1,37 @@
+@use "@styles/abstracts/colors/palette";
+@use "@styles/abstracts/font/sizes" as font-sizes;
+@use "@styles/abstracts/mixins/font-size";
+@use "@styles/abstracts/mixins/display";
+@use "@styles/abstracts/mixins/main-container";
+
+#arcade-mode {
+    position: relative;
+    @include display.flex($direction: column, $justify: center, $row: 25);
+    @include main-container.full-screen;
+    @include main-container.container(0, 5%);
+    background-color: palette.$primary;
+
+    .text-container {
+        @include display.flex($direction: column, $row: 5);
+        width: 100%;
+
+        .title {
+            color: palette.$white;
+            @include font-size.set-font-size(font-sizes.$heading, "large");
+            text-align: center;
+            font-weight: 800;
+        }
+
+        .content {
+            color: palette.$secondary-white;
+            @include font-size.set-font-size(font-sizes.$text);
+            text-align: center;
+        }
+    }
+
+    @media (orientation: landscape) {
+        .text-container {
+            align-items: flex-start;
+        }
+    }
+}

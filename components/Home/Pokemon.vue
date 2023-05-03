@@ -46,12 +46,12 @@ onMounted(() => {
 <template>
     <section id="pokemon">
         <div class="text-container">
-            <h1 class="title">
+            <h2 class="title">
                 <span class="count">
                     {{ count }}
                 </span>
                 Pokémon
-            </h1>
+            </h2>
             <article class="content-container">
                 <p class="content">
                     There are over 300 Pokémon for you to encounter and possibly catch. Can you be a true Pokémon master and catch them all?
