@@ -8,7 +8,7 @@
 @use "@styles/animations/gradient";
 
 @mixin card-border($gradient) {
-    box-shadow: 0 0 10px map.get($gradient, "start");
+    box-shadow: 0 0 15px map.get($gradient, "start");
     background-image: createGradient.linearGradient($gradient);
 }
 
@@ -18,8 +18,18 @@
     aspect-ratio: 2;
     padding: 10px;
     border-radius: 10px;
-    @include animation.animate(gradient-keyframes 500ms ease-in-out infinite alternate);
-    background-size: 300% 300%;
+    background-image: linear-gradient(palette.$white, palette.$secondary);
+    @include animation.animate(gradient-keyframes 1500ms ease-in-out infinite alternate);
+    background-size: 200% 200%;
+    transition: 400ms;
+    transition-timing-function: ease-out;
+
+    &.tent {
+        animation-delay: 500ms;
+    }
+    &.tower {
+        animation-delay: 1s;
+    }
 
     &:hover {
         &.battle {
