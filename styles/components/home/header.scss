@@ -44,7 +44,7 @@
             }
 
             .content {
-                @include font-size.set-font-size(font-sizes.$text, "small");
+                @include font-size.set-font-size(font-sizes.$text);
             }
         }
 

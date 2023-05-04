@@ -22,9 +22,9 @@ defineProps({
             :alt="icon"
             class="icon">
         <article class="text-container">
-            <strong class="sub-title">
+            <span class="sub-title">
                 {{ title }}
-            </strong>
+            </span>
             <p class="description">
                 {{ description }}
             </p>

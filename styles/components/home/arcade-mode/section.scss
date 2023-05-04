@@ -35,8 +35,16 @@
     }
 
     @media (orientation: landscape) {
+        row-gap: 10dvh;
+
         .text-container {
             align-items: flex-start;
+        }
+
+        .event-container {
+            flex-direction: row;
+            justify-content: space-evenly;
+            align-items: stretch;
         }
     }
 }

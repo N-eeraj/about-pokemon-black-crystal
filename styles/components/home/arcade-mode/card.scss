@@ -2,22 +2,31 @@
 @use "@styles/abstracts/font/sizes" as font-sizes;
 @use "@styles/abstracts/mixins/font-size";
 @use "@styles/abstracts/mixins/display";
-@use "@styles/abstracts/functions/gradient";
+@use "@styles/abstracts/mixins/animation";
+@use "@styles/abstracts/functions/gradient" as createGradient;
+@use "@styles/animations/gradient";
 
 .card {
     position: relative;
-    @include display.flex($justify: space-around);
+    @include display.flex($justify: space-evenly);
+    aspect-ratio: 2;
     padding: 10px;
     border-radius: 10px;
-    
-    &.battle {
-        background-image: gradient.linearGradient(palette.$grass);
-    }
-    &.tent {
-        background-image: gradient.linearGradient(palette.$fire);
-    }
-    &.tower {
-        background-image: gradient.linearGradient(palette.$water);
+    @include animation.animate(gradient-keyframes 500ms ease-in-out infinite alternate);
+    background-size: 300% 300%;
+
+    &:hover {
+        &.battle {
+            background-image: createGradient.linearGradient(palette.$grass);
+        }
+
+        &.tent {
+            background-image: createGradient.linearGradient(palette.$fire);
+        }
+
+        &.tower {
+            background-image: createGradient.linearGradient(palette.$water);
+        }
     }
     
     &::before {
@@ -25,10 +34,10 @@
         position: absolute;
         top: 50%;
         left: 50%;
-        width: 99%;
-        height: 99%;
+        width: calc(100% - 3px);
+        height: calc(100% - 3px);
         transform: translate(-50%, -50%);
-        background-color: palette.$secondary;
+        background-color: #1B1B1B;
         border-radius: 10px;
     }
 
@@ -48,10 +57,29 @@
         .sub-title {
             color: palette.$white;
             @include font-size.set-font-size(font-sizes.$heading, "small");
+            font-weight: 600;
         }
         .description {
             color: palette.$secondary-white;
             @include font-size.set-font-size(font-sizes.$text, "small");
         }
+    }
+
+    @media (orientation: landscape) {
+        flex-direction: column;
+        width: 30%;
+
+        .icon {
+            width: min(10vh, 80px);
+            height: min(10vh, 80px);
+        }
+
+        .text-container {
+            width: 95%;
+        }
+    }
+
+    @media (orientation: landscape) and (min-width: 1000px) {
+        aspect-ratio: 1.25;
     }
 }
