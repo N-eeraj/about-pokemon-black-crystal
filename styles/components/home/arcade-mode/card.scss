@@ -1,3 +1,4 @@
+@use "sass:map";
 @use "@styles/abstracts/colors/palette";
 @use "@styles/abstracts/font/sizes" as font-sizes;
 @use "@styles/abstracts/mixins/font-size";
@@ -5,6 +6,11 @@
 @use "@styles/abstracts/mixins/animation";
 @use "@styles/abstracts/functions/gradient" as createGradient;
 @use "@styles/animations/gradient";
+
+@mixin card-border($gradient) {
+    box-shadow: 0 0 10px map.get($gradient, "start");
+    background-image: createGradient.linearGradient($gradient);
+}
 
 .card {
     position: relative;
@@ -17,15 +23,13 @@
 
     &:hover {
         &.battle {
-            background-image: createGradient.linearGradient(palette.$grass);
+            @include card-border(palette.$grass);
         }
-
         &.tent {
-            background-image: createGradient.linearGradient(palette.$fire);
+            @include card-border(palette.$fire);
         }
-
         &.tower {
-            background-image: createGradient.linearGradient(palette.$water);
+            @include card-border(palette.$water);
         }
     }
     

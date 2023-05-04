@@ -18,6 +18,10 @@
     &:not(strong) {
         font-weight: 500;
     }
+
+    &:not(button, a) {
+        cursor: default;
+    }
 }
 
 a {
