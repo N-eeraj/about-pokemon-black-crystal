@@ -1,8 +1,9 @@
 <template>
-    <NavBar />
+    <LayoutNavBar />
     <main>
         <slot />
     </main>
+    <LayoutFooterSection />
 </template>
 
 <style

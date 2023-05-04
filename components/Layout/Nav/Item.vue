@@ -35,7 +35,7 @@ defineProps({
 </template>
 
 <style
-    src="@styles/components/nav/item.scss"
+    src="@styles/components/layout/nav/item.scss"
     lang="scss"
     scoped>
 </style>

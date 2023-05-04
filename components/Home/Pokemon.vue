@@ -1,6 +1,6 @@
 <script setup>
 import { getInRange } from '@composables/useRandom'
-import pokemonCards from '@data/pokemonCards'
+import pokemonCards from '@data/home/pokemonCards'
 
 const count = ref(0)
 const randomPokemonImage = ref(null)

@@ -1,6 +1,6 @@
 <script setup>
 import { getInRange } from '@composables/useRandom'
-import gameModes from '@data/gameModes'
+import gameModes from '@data/home/gameModes'
 
 const randomCharacter = ref(null)
 

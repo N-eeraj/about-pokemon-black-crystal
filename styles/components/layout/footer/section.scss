@@ -1,0 +1,11 @@
+@use "@styles/abstracts/colors/palette";
+@use "@styles/abstracts/font/sizes" as font-sizes;
+@use "@styles/abstracts/mixins/font-size";
+@use "@styles/abstracts/mixins/display";
+@use "@styles/abstracts/mixins/main-container";
+
+.footer-section {
+    @include main-container.max-width-padding;
+    @include main-container.container(30px);
+    background-color: palette.$primary;
+}

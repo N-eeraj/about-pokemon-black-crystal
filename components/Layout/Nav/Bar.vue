@@ -1,5 +1,5 @@
 <script setup>
-import navLinks from '@data/navLinks'
+import navLinks from '@data/layout/navLinks'
 const navBar = useAtTop()
 </script>
 
@@ -8,7 +8,7 @@ const navBar = useAtTop()
         ref="navBar"
         class="nav-bar at-top">
         <ul class="nav-list">
-            <NavItem
+            <LayoutNavItem
                 v-for="({ to, text, icon }, index) in navLinks"
                 :to="to"
                 :text="text"
@@ -20,7 +20,7 @@ const navBar = useAtTop()
 </template>
 
 <style
-    src="@styles/components/nav/bar.scss"
+    src="@styles/components/layout/nav/bar.scss"
     lang="scss"
     scoped>
 </style>

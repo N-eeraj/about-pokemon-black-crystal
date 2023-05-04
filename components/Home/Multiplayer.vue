@@ -1,5 +1,5 @@
 <script setup>
-import multiplayerDetails from '@data/multiplayerDetails'
+import multiplayerDetails from '@data/home/multiplayerDetails'
 </script>
 
 <template>

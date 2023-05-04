@@ -1,6 +1,6 @@
 
 <script setup>
-import opponentDetails from '@data/opponentDetails'
+import opponentDetails from '@data/home/opponentDetails'
 
 const active = ref(0)
 

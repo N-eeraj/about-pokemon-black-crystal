@@ -1,5 +1,5 @@
 <script setup>
-import arcadeEvents from '@data/arcadeEvents'
+import arcadeEvents from '@data/home/arcadeEvents'
 </script>
 
 <template>
