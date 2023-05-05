@@ -1,11 +1,58 @@
 @use "@styles/abstracts/colors/palette";
+@use "@styles/abstracts/font/family" as font-families;
 @use "@styles/abstracts/font/sizes" as font-sizes;
 @use "@styles/abstracts/mixins/font-size";
 @use "@styles/abstracts/mixins/display";
 @use "@styles/abstracts/mixins/main-container";
+@use "@styles/abstracts/functions/gradient" as createGradient;
 
 .footer-section {
+    @include display.flex($direction: column, $row: 10);
     @include main-container.max-width-padding;
     @include main-container.container(30px);
     background-color: palette.$primary;
+
+    .title {
+        @include display.flex($direction: column, $row: 10);
+        width: min(300px, 80vw);
+
+        .logo {
+            width: 100%;
+            object-fit: contain;
+        }
+
+        .game-name {
+            width: 100%;
+            font-family: font-families.$facon;
+            color: palette.$white;
+            @include font-size.set-font-size(font-sizes.$heading);
+            text-align: center;
+        }
+
+        .play-now-btn {
+            position: relative;
+            border: none;
+            background-image: createGradient.linearGradient(palette.$aquamarine);
+    
+            &::before {
+                content: '';
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                width: calc(100% - 3px);
+                height: calc(100% - 3px);
+                transform: translate(-50%, -50%);
+                background-color: palette.$primary;
+                border-radius: 7px;
+            }
+        
+            span {
+                position: relative;
+                background-clip: text;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-image: createGradient.linearGradient(palette.$aquamarine);
+            }
+        }
+    }
 }

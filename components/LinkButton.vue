@@ -2,7 +2,7 @@
 defineProps({
     text: {
         type: String,
-        required: true
+        required: false
     },
     link: {
         type: String,
@@ -21,7 +21,10 @@ defineProps({
         :to="link"
         :target="external ? '_blank' : '_self'"
         class="link-btn">
-        {{ text }}
+        <template v-if="text">
+            {{ text }}
+        </template>
+        <slot v-else />
     </NuxtLink>
 </template>
 
