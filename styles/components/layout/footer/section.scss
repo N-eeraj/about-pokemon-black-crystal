@@ -8,7 +8,7 @@
 @use "@styles/abstracts/functions/gradient" as createGradient;
 
 .footer-section {
-    @include display.flex($direction: column, $row: 10);
+    @include display.flex($direction: column, $row: 30);
     @include main-container.max-width-padding;
     @include main-container.container(30px);
     background-color: palette.$primary;
@@ -42,6 +42,14 @@
                 background-image: createGradient.linearGradient(palette.$aquamarine);
                 cursor: inherit;
             }
+        }
+    }
+
+    .link-container {
+        @include display.flex($direction: column, $row: 20);
+
+        .link-group {
+            @include display.flex($direction: column, $row: 5);
         }
     }
 }

@@ -15,7 +15,7 @@ defineProps({
     <li class="link-item">
     <NuxtLink
         :to="link"
-        class="link-btn">
+        class="link">
         {{ text }}
     </NuxtLink>
     </li>

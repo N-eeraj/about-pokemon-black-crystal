@@ -1,0 +1,12 @@
+@use "@styles/abstracts/colors/primary";
+@use "@styles/abstracts/font/sizes" as font-sizes;
+@use "@styles/abstracts/mixins/font-size";
+
+.link-item {
+    width: 100%;
+
+    .link {
+        @include font-size.set-font-size(font-sizes.$text, "medium");
+        color: primary.$secondary-white;
+    }
+}
