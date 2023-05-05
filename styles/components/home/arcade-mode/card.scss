@@ -3,6 +3,7 @@
 @use "@styles/abstracts/font/sizes" as font-sizes;
 @use "@styles/abstracts/mixins/font-size";
 @use "@styles/abstracts/mixins/display";
+@use "@styles/abstracts/mixins/gradient-border";
 @use "@styles/abstracts/mixins/animation";
 @use "@styles/abstracts/functions/gradient" as createGradient;
 @use "@styles/animations/gradient";
@@ -13,12 +14,11 @@
 }
 
 .card {
-    position: relative;
     @include display.flex($justify: space-evenly);
     aspect-ratio: 2;
     padding: 10px;
     border-radius: 10px;
-    background-image: linear-gradient(palette.$white, palette.$secondary);
+    @include gradient-border.gradient-border($gradient: linear-gradient(palette.$white, palette.$secondary), $border-radius: 7px);
     @include animation.animate(gradient-keyframes 1500ms ease-in-out infinite alternate);
     background-size: 200% 200%;
     transition: 400ms;
@@ -41,22 +41,6 @@
         &.tower {
             @include card-border(palette.$water);
         }
-    }
-    
-    &::before {
-        content: '';
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        width: calc(100% - 3px);
-        height: calc(100% - 3px);
-        transform: translate(-50%, -50%);
-        background-color: #1B1B1B;
-        border-radius: 10px;
-    }
-
-    * {
-        position: relative;
     }
 
     .icon {

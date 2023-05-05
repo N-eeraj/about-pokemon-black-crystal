@@ -1,0 +1,20 @@
+@mixin gradient-border($gradient, $border-radius: 3px) {
+    position: relative;
+    background-image: $gradient;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: calc(100% - 3px);
+        height: calc(100% - 3px);
+        transform: translate(-50%, -50%);
+        background-color: #1B1B1B;
+        border-radius: $border-radius;
+    }
+
+    * {
+        position: relative;
+    }
+}

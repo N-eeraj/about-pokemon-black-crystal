@@ -4,6 +4,7 @@
 @use "@styles/abstracts/mixins/font-size";
 @use "@styles/abstracts/mixins/display";
 @use "@styles/abstracts/mixins/main-container";
+@use "@styles/abstracts/mixins/gradient-border";
 @use "@styles/abstracts/functions/gradient" as createGradient;
 
 .footer-section {
@@ -30,24 +31,11 @@
         }
 
         .play-now-btn {
-            position: relative;
+            width: 200px;
+            @include gradient-border.gradient-border($gradient: createGradient.linearGradient(palette.$aquamarine), $border-radius: 7px);
             border: none;
-            background-image: createGradient.linearGradient(palette.$aquamarine);
-    
-            &::before {
-                content: '';
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                width: calc(100% - 3px);
-                height: calc(100% - 3px);
-                transform: translate(-50%, -50%);
-                background-color: palette.$primary;
-                border-radius: 7px;
-            }
         
             span {
-                position: relative;
                 background-clip: text;
                 -webkit-background-clip: text;
                 -webkit-text-fill-color: transparent;
