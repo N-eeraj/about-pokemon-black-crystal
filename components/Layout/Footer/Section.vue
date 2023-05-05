@@ -22,18 +22,16 @@ import footerLinks from '@data/layout/footerLinks'
             </LinkButton>
         </div>
 
-        <div class="link-container">
-            <ul
-                v-for="(linkGroup, groupIndex) in footerLinks"
-                class="link-group"
-                :key="groupIndex">
-                <LayoutFooterLink
-                    v-for="({link, text}, itemIndex) in linkGroup"
-                    :link="link"
-                    :text="text"
-                    :key="`${groupIndex}.${itemIndex}`" />
-            </ul>
-        </div>
+        <ul
+            v-for="(linkGroup, groupIndex) in footerLinks"
+            class="link-group"
+            :key="groupIndex">
+            <LayoutFooterLink
+                v-for="({link, text}, itemIndex) in linkGroup"
+                :link="link"
+                :text="text"
+                :key="`${groupIndex}.${itemIndex}`" />
+        </ul>
     </footer>
 </template>
 

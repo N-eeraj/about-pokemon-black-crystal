@@ -10,11 +10,11 @@
 .footer-section {
     @include display.flex($direction: column, $row: 30);
     @include main-container.max-width-padding;
-    @include main-container.container(30px);
+    @include main-container.container(max(25px, 10%));
     background-color: palette.$primary;
 
     .title {
-        @include display.flex($direction: column, $row: 10);
+        @include display.flex($direction: column, $row: 15);
         width: min(300px, 80vw);
 
         .logo {
@@ -32,7 +32,8 @@
 
         .play-now-btn {
             width: 200px;
-            @include gradient-border.gradient-border($gradient: createGradient.linearGradient(palette.$aquamarine), $border-radius: 7px);
+            @include gradient-border.gradient-border($gradient: createGradient.linearGradient(palette.$aquamarine), $time: 400ms, $border-radius: 7px);
+            background-size: 150% 150%;
             border: none;
         
             span {
@@ -45,11 +46,33 @@
         }
     }
 
-    .link-container {
-        @include display.flex($direction: column, $row: 20);
+    .link-group {
+        @include display.flex($direction: column, $row: 5);
+    }
+
+    @media (orientation: landscape) {
+        flex-direction: row;
+
+        .title {
+            order: 1;
+            width: 30%;
+        }
 
         .link-group {
-            @include display.flex($direction: column, $row: 5);
+            &:first-of-type {
+                order: 0;
+            }
+            &:last-of-type {
+                order: 2;
+            }
         }
+    }
+
+    @media (orientation: landscape) and (max-width: 999px) {
+        justify-content: space-between;
+    }
+
+    @media (orientation: landscape) and (min-width: 1000px) {
+        justify-content: space-around;
     }
 }

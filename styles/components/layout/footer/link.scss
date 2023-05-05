@@ -8,5 +8,10 @@
     .link {
         @include font-size.set-font-size(font-sizes.$text, "medium");
         color: primary.$secondary-white;
+        transition: 400ms;
+
+        &:hover {
+            color: primary.$white;
+        }
     }
 }
