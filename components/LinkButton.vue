@@ -1,12 +1,12 @@
 <script setup>
 defineProps({
-    text: {
-        type: String,
-        required: false
-    },
     link: {
         type: String,
         required: true
+    },
+    text: {
+        type: String,
+        required: false
     },
     external: {
         type: Boolean,

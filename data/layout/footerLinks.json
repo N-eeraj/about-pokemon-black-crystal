@@ -1,0 +1,38 @@
+[
+    [
+        {
+            "link": "/",
+            "text": "Home"
+        },
+        {
+            "link": "/help",
+            "text": "Tutorials"
+        },
+        {
+            "link": "/info",
+            "text": "Disclaimer"
+        },
+        {
+            "link": "/#about-game",
+            "text": "About Game"
+        }
+    ],
+    [
+        {
+            "link": "/#pokemon",
+            "text": "Pokémon"
+        },
+        {
+            "link": "/#multiplayer",
+            "text": "Multiplayer"
+        },
+        {
+            "link": "/#story-mode",
+            "text": "Story Mode"
+        },
+        {
+            "link": "/#arcade-mode",
+            "text": "Arcade Mode"
+        }
+    ]
+]
