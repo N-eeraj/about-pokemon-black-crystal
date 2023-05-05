@@ -4,13 +4,10 @@
 @use "@styles/abstracts/mixins/font-size";
 @use "@styles/abstracts/mixins/display";
 @use "@styles/abstracts/mixins/gradient-border";
-@use "@styles/abstracts/mixins/animation";
 @use "@styles/abstracts/functions/gradient" as createGradient;
-@use "@styles/animations/gradient";
 
 @mixin card-border($gradient) {
-    box-shadow: 0 0 15px map.get($gradient, "start");
-    background-image: createGradient.linearGradient($gradient);
+    @include gradient-border.gradient-border($gradient: createGradient.linearGradient($gradient), $time: 1500ms, $border-radius: 7px);
 }
 
 .card {
@@ -18,8 +15,7 @@
     aspect-ratio: 2;
     padding: 10px;
     border-radius: 10px;
-    @include gradient-border.gradient-border($gradient: linear-gradient(palette.$white, palette.$secondary), $border-radius: 7px);
-    @include animation.animate(gradient-keyframes 1500ms ease-in-out infinite alternate);
+    @include gradient-border.gradient-border($gradient: linear-gradient(palette.$white, palette.$secondary), $time: 1500ms, $border-radius: 7px);
     background-size: 200% 200%;
     transition: 400ms;
     transition-timing-function: ease-out;
