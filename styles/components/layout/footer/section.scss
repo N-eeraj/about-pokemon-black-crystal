@@ -32,7 +32,7 @@
 
         .play-now-btn {
             width: 200px;
-            @include gradient-border.gradient-border($gradient: createGradient.linearGradient(palette.$aquamarine), $time: 400ms, $border-radius: 7px);
+            @include gradient-border.gradient-border(createGradient.linearGradient(palette.$aquamarine, 135), 400, 7);
             background-size: 150% 150%;
             border: none;
         

@@ -7,7 +7,7 @@
 @use "@styles/abstracts/functions/gradient" as createGradient;
 
 @mixin card-border($gradient) {
-    @include gradient-border.gradient-border($gradient: createGradient.linearGradient($gradient), $time: 1500ms, $border-radius: 7px);
+    @include gradient-border.gradient-border($gradient: $gradient, $time: 1000, $border-radius: 7);
 }
 
 .card {
@@ -15,8 +15,8 @@
     aspect-ratio: 2;
     padding: 10px;
     border-radius: 10px;
-    @include gradient-border.gradient-border($gradient: linear-gradient(palette.$white, palette.$secondary), $time: 1500ms, $border-radius: 7px);
-    background-size: 200% 200%;
+    @include card-border(linear-gradient(135deg, palette.$white, palette.$secondary));
+    background-size: 150% 150%;
     transition: 400ms;
     transition-timing-function: ease-out;
 
@@ -29,13 +29,13 @@
 
     &:hover {
         &.battle {
-            @include card-border(palette.$grass);
+            @include card-border(createGradient.linearGradient(palette.$grass));
         }
         &.tent {
-            @include card-border(palette.$fire);
+            @include card-border(createGradient.linearGradient(palette.$fire));
         }
         &.tower {
-            @include card-border(palette.$water);
+            @include card-border(createGradient.linearGradient(palette.$water));
         }
     }
 
