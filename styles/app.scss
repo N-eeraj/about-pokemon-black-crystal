@@ -1,1 +1,12 @@
 @use "@styles/template";
+@use "@styles/abstracts/mixins/display";
+@use "@styles/abstracts/mixins/main-container";
+
+#__nuxt {
+    @include display.flex($direction: column, $align: stretch);
+    @include main-container.full-screen;
+
+    main {
+        flex-grow: 1;
+    }
+}
