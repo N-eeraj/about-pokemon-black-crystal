@@ -14,12 +14,17 @@ const props = defineProps({
         default: false
     }
 })
+
+const emit =  defineEmits(['select'])
+
+const handleSelect = () => emit('select', props.value)
 </script>
 
 <template>
     <div
         class="tab"
-        :class="{ active: isActive }">
+        :class="{ active: isActive }"
+        @click="handleSelect">
         {{ text }}
     </div>
 </template>

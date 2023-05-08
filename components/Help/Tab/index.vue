@@ -1,7 +1,13 @@
 <script setup>
 import tabs from '@data/help/tabs'
 
-const activetab = ref(0)
+const activetab = ref(null)
+
+const handleSelect = value => activetab.value = value
+
+onMounted(() => {
+    activetab.value = tabs[0].value
+})
 </script>
 
 <template>
@@ -9,8 +15,9 @@ const activetab = ref(0)
         v-for="({ text, value }, index) in tabs"
         :text="text"
         :value="value"
-        :is-active="index === activetab"
-        :key="index" />
+        :is-active="activetab === value"
+        :key="index"
+        @select="handleSelect" />
 </template>
 
 <style
