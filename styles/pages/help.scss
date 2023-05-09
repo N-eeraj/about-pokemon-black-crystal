@@ -1,13 +1,11 @@
 @use "@styles/abstracts/colors/palette";
-@use "@styles/abstracts/font/sizes" as font-sizes;
-@use "@styles/abstracts/mixins/font-size";
 @use "@styles/abstracts/mixins/display";
 @use "@styles/abstracts/mixins/main-container";
 
 .tab-container {
     @include display.flex($direction: column, $row: 30);
-    @include main-container.max-width-padding;
+    padding: 0;
     min-height: 100%;
-    @include main-container.container;
+    @include main-container.container(0, 0);
     background-color: palette.$primary;
 }

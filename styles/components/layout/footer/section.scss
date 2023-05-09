@@ -48,6 +48,7 @@
 
     .link-group {
         @include display.flex($direction: column, $row: 5);
+        list-style-type: none;
     }
 
     @media (orientation: landscape) {

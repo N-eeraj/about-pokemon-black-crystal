@@ -14,7 +14,7 @@ onMounted(() => {
 </script>
 
 <template>
-    <div class="tab-container">
+    <div class="tab-switch-container">
         <HelpTabItem
             v-for="({ text, value }, index) in tabs"
             :text="text"

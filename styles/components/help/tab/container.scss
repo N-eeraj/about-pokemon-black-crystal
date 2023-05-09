@@ -1,0 +1,6 @@
+@use "@styles/abstracts/mixins/display";
+
+.tab-switch-container {
+    width: 100%;
+    @include display.flex;
+}

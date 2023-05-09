@@ -22,7 +22,7 @@ const handleSelect = () => emit('select', props.value)
 
 <template>
     <div
-        class="tab"
+        class="tab-item"
         :class="{ active: isActive }"
         @click="handleSelect">
         {{ text }}

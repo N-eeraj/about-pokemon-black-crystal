@@ -1,0 +1,20 @@
+@use "@styles/abstracts/colors/primary";
+
+.tab-item {
+    flex: 1;
+    padding: 10px;
+    text-align: center;
+    color: primary.$secondary-white;
+    cursor: pointer;
+    border-bottom: 3px solid primary.$primary;
+
+    &:hover {
+        background-color: primary.$secondary;
+        border-color: primary.$secondary-white;
+    }
+
+    &.active {
+        color: primary.$white;
+        border-color: primary.$accent;
+    }
+}

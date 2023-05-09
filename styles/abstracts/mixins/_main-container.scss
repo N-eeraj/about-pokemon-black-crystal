@@ -3,8 +3,8 @@
     height: 100dvh;
 }
 
-@mixin max-width-padding($x: 0, $y: 5%) {
-    padding: $x max(calc((100vw - 1800px) / 2), $y);
+@mixin max-width-padding($y: 0, $x: 5%) {
+    padding: $y max(calc((100vw - 1800px) / 2), $x);
 }
 
 @mixin container($x: 0, $y: 5%) {
