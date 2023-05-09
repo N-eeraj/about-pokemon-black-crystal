@@ -1,9 +1,8 @@
 <script setup>
 useMeta('Help')
 
-const handleTabChange = tab => {
-  console.log(tab)
-}
+const router = useRouter()
+const handleTabChange = tab => router.replace({ query: { tab } })
 </script>
 
 <template>

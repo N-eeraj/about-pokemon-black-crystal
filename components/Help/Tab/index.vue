@@ -1,6 +1,8 @@
 <script setup>
 import tabs from '@data/help/tabs'
 
+const route = useRoute()
+
 const emit =  defineEmits(['change'])
 const activetab = ref(null)
 
@@ -9,7 +11,7 @@ const handleSelect = value => activetab.value = value
 watch(activetab, () => emit('change', activetab.value))
 
 onMounted(() => {
-    activetab.value = tabs[0].value
+    activetab.value = route.query.tab ? route.query.tab : tabs[0].value
 })
 </script>
 
