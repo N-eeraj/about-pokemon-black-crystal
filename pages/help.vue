@@ -1,13 +1,26 @@
 <script setup>
+import tabs from '@data/help/tabs'
+
 useMeta('Help')
 
 const router = useRouter()
-const handleTabChange = tab => router.replace({ query: { tab } })
+
+const activeTab = ref(null)
+
+const handleTabChange = tab => {
+  activeTab.value = tab
+  router.replace({ query: { tab } })
+}
 </script>
 
 <template>
   <div class="tab-container">
-    <HelpTab @change="handleTabChange" />
+    <HelpTab
+      :tabs="tabs"
+      @change="handleTabChange" />
+
+    <HelpFaqs v-if="activeTab === 'faq'" />
+    <HelpVideos v-else-if="activeTab === 'videos'" />
   </div>
 </template>
 
