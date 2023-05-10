@@ -19,7 +19,7 @@ const handleTabChange = tab => {
       :tabs="tabs"
       @change="handleTabChange" />
 
-    <HelpFaqs v-if="activeTab === 'faq'" />
+    <HelpFaq v-if="activeTab === 'faq'" />
     <HelpVideos v-else-if="activeTab === 'videos'" />
   </div>
 </template>

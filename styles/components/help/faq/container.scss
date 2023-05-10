@@ -1,0 +1,7 @@
+@use "@styles/abstracts/mixins/display";
+@use "@styles/abstracts/mixins/main-container";
+
+.faq-section {
+    @include display.flex($direction: column, $justify: center, $row: 25);
+    @include main-container.container;
+}
