@@ -13,7 +13,7 @@ import faqs from '@data/help/faq'
 </template>
 
 <style
-    src="@styles/components/help/faq/expansion-panel.scss"
+    src="@styles/components/help/faq/container.scss"
     lang="scss"
     scoped>
 </style>

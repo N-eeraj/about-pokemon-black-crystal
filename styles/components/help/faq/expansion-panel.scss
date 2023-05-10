@@ -1,0 +1,31 @@
+@use "@styles/abstracts/colors/primary";
+
+.expansion-panel {
+    width: 100%;
+    background-color: primary.$secondary;
+    color: primary.$white;
+    border-radius: 7px;
+    
+    .question {
+        padding: 7px 15px;
+        cursor: pointer;
+
+        &::marker, &::-webkit-details-marker {
+            display: none; 
+            content: "";
+        }
+    }
+
+    .answer {
+        padding: 20px;
+    }
+    
+    &[open] {
+        .question {
+            background-color: primary.$white;
+            color: primary.$primary;
+            border-radius: 7px 7px 0 0;
+        }
+    }
+
+}

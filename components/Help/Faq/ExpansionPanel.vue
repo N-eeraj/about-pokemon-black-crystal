@@ -12,18 +12,18 @@ defineProps({
 </script>
 
 <template>
-    <details>
-        <summary>
+    <details class="expansion-panel">
+        <summary class="question">
             {{ question }}
         </summary>
-        <p>
-            {{ answer }}
-        </p>
+        <div
+            v-html="answer"
+            class="answer" />
     </details>
 </template>
 
 <style
-    src="@styles/components/help/faq/container.scss"
+    src="@styles/components/help/faq/expansion-panel.scss"
     lang="scss"
     scoped>
 </style>

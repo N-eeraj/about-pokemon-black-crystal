@@ -4,7 +4,7 @@
 
 .tab-container {
     @include display.flex($direction: column, $row: 30);
-    padding: 0;
+    width: 100%;
     min-height: 100%;
     @include main-container.container(0, 0);
     background-color: palette.$primary;

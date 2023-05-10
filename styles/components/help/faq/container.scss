@@ -3,5 +3,5 @@
 
 .faq-section {
     @include display.flex($direction: column, $justify: center, $row: 25);
-    @include main-container.container;
+    width: min(90%, 800px);
 }
