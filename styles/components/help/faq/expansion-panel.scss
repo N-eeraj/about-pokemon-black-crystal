@@ -7,8 +7,11 @@
     border-radius: 7px;
     
     .question {
-        padding: 7px 15px;
+        display: block;
+        width: 100%;
+        padding: 10px 15px;
         cursor: pointer;
+        transition: 400ms;
 
         &::marker, &::-webkit-details-marker {
             display: none; 
@@ -17,14 +20,24 @@
     }
 
     .answer {
-        padding: 20px;
+        height: 0;
+        padding: 0 20px;
+        transform-origin: top;
+        opacity: 0;
+        transition: 400ms;
     }
     
-    &[open] {
+    &.is-active {
         .question {
             background-color: primary.$white;
             color: primary.$primary;
             border-radius: 7px 7px 0 0;
+        }
+
+        .answer {
+            height: auto;
+            padding: 20px;
+            opacity: 1;
         }
     }
 

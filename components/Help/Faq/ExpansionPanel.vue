@@ -7,19 +7,32 @@ defineProps({
     answer: {
         type: String,
         required: true
+    },
+    isActive: {
+        type: Boolean,
+        required: false,
+        default: false
     }
 })
+
+const emit = defineEmits(['change'])
+
+const handleChange = () => emit('change')
 </script>
 
 <template>
-    <details class="expansion-panel">
-        <summary class="question">
+    <div
+        class="expansion-panel"
+        :class="{ 'is-active': isActive }">
+        <strong
+            class="question"
+            @click="handleChange">
             {{ question }}
-        </summary>
+        </strong>
         <div
-            v-html="answer"
+            v-html="isActive ? answer : ''"
             class="answer" />
-    </details>
+    </div>
 </template>
 
 <style

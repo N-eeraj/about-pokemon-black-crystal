@@ -1,5 +1,14 @@
 <script setup>
 import faqs from '@data/help/faq'
+
+const currentFAQ = ref(null)
+
+const handleChange = (index) => {
+    if (currentFAQ.value === index)
+        currentFAQ.value = null
+    else
+        currentFAQ.value = index
+}
 </script>
 
 <template>
@@ -8,7 +17,9 @@ import faqs from '@data/help/faq'
             v-for="({ question, answer }, index) in faqs"
             :question="question"
             :answer="answer"
-            :key="index" />
+            :is-active="currentFAQ === index"
+            :key="index"
+            @change="handleChange(index)" />
     </section>
 </template>
 
