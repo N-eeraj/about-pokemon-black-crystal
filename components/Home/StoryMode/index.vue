@@ -5,7 +5,7 @@ import opponentDetails from '@data/home/opponentDetails'
 const active = ref(0)
 
 const upadateActive = () => {
-    const offset = document.getElementById('story-mode').offsetTop
+    const offset = document.getElementById('story-mode')?.offsetTop
     const scrollY = window.scrollY
     const height = window.innerHeight
 
