@@ -1,4 +1,6 @@
 @use "@styles/abstracts/colors/primary";
+@use "@styles/abstracts/font/sizes" as font-sizes;
+@use "@styles/abstracts/mixins/font-size";
 
 .expansion-panel {
     width: 100%;
@@ -10,6 +12,7 @@
         display: block;
         width: 100%;
         padding: 10px 15px;
+        @include font-size.set-font-size(font-sizes.$text);
         cursor: pointer;
         transition: 400ms;
 
@@ -22,6 +25,7 @@
     .answer {
         height: 0;
         padding: 0 20px;
+        @include font-size.set-font-size(font-sizes.$text, "small");
         transform-origin: top;
         opacity: 0;
         transition: 400ms;
