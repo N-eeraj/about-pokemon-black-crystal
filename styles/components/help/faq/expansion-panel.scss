@@ -13,6 +13,7 @@
         width: 100%;
         padding: 10px 15px;
         @include font-size.set-font-size(font-sizes.$text);
+        font-weight: 700;
         cursor: pointer;
         transition: 400ms;
 
@@ -42,6 +43,12 @@
             height: auto;
             padding: 20px;
             opacity: 1;
+        }
+    }
+
+    @media (orientation: landscape) and (min-width: 1000px) {
+        .question {
+            font-weight: 600;
         }
     }
 

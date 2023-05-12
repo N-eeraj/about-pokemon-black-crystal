@@ -1,0 +1,15 @@
+.text-container {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.badges {
+    width: 100px;
+    object-fit: contain;
+}
