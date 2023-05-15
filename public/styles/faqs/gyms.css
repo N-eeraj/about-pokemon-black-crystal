@@ -1,7 +1,7 @@
 .text-container {
     display: flex;
     flex-direction: column;
-    row-gap: 10px;
+    row-gap: 20px;
 }
 
 .container {
@@ -12,4 +12,27 @@
 .badges {
     width: 100px;
     object-fit: contain;
+}
+
+.badges-info {
+    flex-direction: column;
+}
+
+.all-badges-img {
+    height: 250px;
+    object-fit: contain;
+    margin-top: 10px;
+}
+
+@media (orientation: landscape) {
+    .badges-info {
+        flex-direction: row-reverse;
+        align-items: center;
+        column-gap: 5%;
+    }
+
+    .all-badges-img {
+        width: 200px;
+        height: auto;
+    }
 }
