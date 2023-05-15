@@ -1,29 +1,71 @@
 <html lang="en">
-    <head>
-        <link rel="stylesheet" href="styles/faqs/gyms.css">
-    </head>
-    <body>
-        <article class="text-container">
-            <div class="container">
+<head>
+    <style>
+        .text-container {
+            display: flex;
+            flex-direction: column;
+            row-gap: 20px;
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .badges {
+            width: 100px;
+            object-fit: contain;
+        }
+
+        .badges-info {
+            flex-direction: column;
+        }
+
+        .all-badges-img {
+            height: 250px;
+            object-fit: contain;
+            margin-top: 10px;
+        }
+
+        @media (orientation: landscape) {
+            .badges-info {
+                flex-direction: row-reverse;
+                align-items: center;
+                column-gap: 5%;
+            }
+
+            .all-badges-img {
+                width: 200px;
+                height: auto;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <article class="text-container">
+        <div class="container">
+            <p>
+                Pokémon Gyms offer Pokémon trainers to train their Pokémon to be stronger.
+                A Pokémon gym will have a few trainers and finally a Gym Leader.
+            </p>
+            <img src="images/help/faqs/badges.png" alt="gym-badge" class="badges">
+        </div>
+        <div class="container badges-info">
+            <div>
                 <p>
-                    Pokémon Gyms offer Pokémon trainers to train their Pokémon to be stronger.
-                    A Pokémon gym will have a few trainers and finally a Gym Leader.
+                    On beating the Gym Leader you'll receive a Gym Badge.
+                    There are 8 Gyms throughout the game, on defeating all the Gym Leaders you'll be able to compete to
+                    become the Pokémon champion.
                 </p>
-                <img src="images/help/faqs/badges.png" alt="gym-badge" class="badges">
+                <br>
+                <p>
+                    The badges you receive can be viewed in the "Gym Badges" page.
+                </p>
             </div>
-            <div class="container badges-info">
-                <div>
-                    <p>
-                        On beating the Gym Leader you'll receive a Gym Badge.
-                        There are 8 Gyms throughout the game, on defeating all the Gym Leaders you'll be able to compete to become the Pokémon champion.
-                    </p>
-                    <br>
-                    <p>
-                        The badges you receive can be viewed in the "Gym Badges" page.
-                    </p>
-                </div>
-                <img src="images/help/faqs/all-badges.png" alt="all-badges" class="all-badges-img">
-            </div>
-        </article>
-    </body>
+            <img src="images/help/faqs/all-badges.png" alt="all-badges" class="all-badges-img">
+        </div>
+    </article>
+</body>
+
 </html>
