@@ -6,6 +6,7 @@ import pc from '@data/help/faq/answers/pc.html?raw'
 import release from '@data/help/faq/answers/release.html?raw'
 import levelUp from '@data/help/faq/answers/level-up.html?raw'
 import evolution from '@data/help/faq/answers/evolution.html?raw'
+import pokecoins from '@data/help/faq/answers/pokecoins.html?raw'
 
 export default [
     {
@@ -39,5 +40,9 @@ export default [
     {
         question: 'How to evolve my Pokémon?',
         answer: evolution
+    },
+    {
+        question: 'What are Pokécoins?',
+        answer: pokecoins
     }
 ]
