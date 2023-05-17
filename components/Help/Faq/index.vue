@@ -8,7 +8,8 @@ const currentFAQ = ref(null)
 const handleChange = (index) => {
     if (currentFAQ.value === index) {
         currentFAQ.value = null
-        router.replace({ query: { faq: index } })
+        const { qNo, ...query } = route.query
+        router.replace({ query })
     }
     else {
         currentFAQ.value = index

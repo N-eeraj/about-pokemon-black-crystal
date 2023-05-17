@@ -21,7 +21,7 @@ export default [
         answer: gyms
     },
     {
-        question: 'What is \"Party Pokémon\"?',
+        question: 'What is "Party Pokémon"?',
         answer: party
     },
     {
