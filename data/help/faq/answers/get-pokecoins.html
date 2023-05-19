@@ -1,0 +1,54 @@
+<html lang="en">
+<head>
+    <style>
+        .text-container {
+            display: flex;
+            flex-direction: column;
+            row-gap: 30px;
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            column-gap: 20px;
+        }
+
+        .event-image {
+            height: 250px;
+            object-fit: contain;
+            margin-top: 10px;
+        }
+
+        @media (orientation: landscape) {
+            p {
+                width: 70%;
+            }
+
+            .event-image {
+                width: 200px;
+                height: auto;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <article class="text-container">
+        <div class="container">
+            <p>
+                You participate in the Arcade events, face different battles and earn Pokécoins on successfully completing the challenge.
+                These events are free to participate in.
+            </p>
+            <img src="images/help/faqs/arcade-events.png" alt="Arcade" class="event-image">
+        </div>
+        <div class="container">
+            <img src="images/help/faqs/carnival-events.png" alt="Carnival" class="event-image">
+            <p>
+                Participate in the Carnival events, play different minigames, some of these events will help you to gain Pokécoins.
+                Some of these events are free while others require payment to participate in.
+            </p>
+        </div>
+    </article>
+</body>
+</html>
