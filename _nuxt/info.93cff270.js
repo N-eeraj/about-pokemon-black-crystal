@@ -1,0 +1,1 @@
+import{u as e}from"./useMeta.7b6e4dee.js";import{c as o,o as s,a as t}from"./entry.230bb997.js";const a=t("h1",null," Disclaimer ",-1),c=[a],m={__name:"info",setup(r){return e("Disclaimer"),(n,_)=>(s(),o("div",null,c))}};export{m as default};
