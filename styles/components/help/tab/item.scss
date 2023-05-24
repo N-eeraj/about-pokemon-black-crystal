@@ -16,5 +16,6 @@
     &.active {
         color: primary.$white;
         border-color: primary.$accent;
+        font-weight: bold;
     }
 }
