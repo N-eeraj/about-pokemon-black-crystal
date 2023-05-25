@@ -1,0 +1,11 @@
+@use "@styles/abstracts/colors/primary";
+@use "@styles/abstracts/mixins/display";
+@use "@styles/abstracts/mixins/main-container";
+
+.video-section {
+    @include display.flex($col: 30);
+    width: 100%;
+    padding: 2.5%;
+    background-color: primary.$secondary;
+    overflow-x: auto;
+}

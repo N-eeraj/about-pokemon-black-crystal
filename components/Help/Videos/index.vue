@@ -1,5 +1,7 @@
 <template>
-    
+    <div class="video-section">
+        <HelpVideosItem v-for="i in 10" />
+    </div>    
 </template>
 
 <style

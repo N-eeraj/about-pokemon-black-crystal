@@ -1,0 +1,28 @@
+@use "@styles/abstracts/colors/primary";
+@use "@styles/abstracts/mixins/display";
+@use "@styles/abstracts/font/sizes" as font-sizes;
+@use "@styles/abstracts/mixins/font-size";
+
+.video-item {
+    height: 70vh;
+    aspect-ratio: 1/2;
+    border-radius: 10px;
+
+    .overlay {
+        @include display.flex($align: flex-end);
+        width: 100%;
+        height: 100%;
+        padding: 3%;
+        background-image: linear-gradient(180deg, rgba(primary.$primary, 0) 70%, primary.$primary);
+        border-radius: 10px;
+
+        .title {
+            color: primary.$white;
+            @include font-size.set-font-size(font-sizes.$text);
+        }
+    }
+
+    @media (orientation: landscape) {
+        height: 65vh;
+    }
+}
