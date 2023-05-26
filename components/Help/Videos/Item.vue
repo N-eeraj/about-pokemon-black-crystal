@@ -1,8 +1,19 @@
+<script setup>
+defineProps({
+    title: {
+        type: String,
+        required: true
+    }
+})
+</script>
+
 <template>
     <div class="video-item">
+        <video class="video">
+        </video>
         <div class="overlay">
             <span class="title">
-                Selecting a Starter
+                {{ title }}
             </span>
         </div>
     </div>

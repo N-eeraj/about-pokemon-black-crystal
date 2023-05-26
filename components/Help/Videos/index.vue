@@ -1,6 +1,12 @@
+<script setup>
+import videos from '@data/help/videos'
+</script>
+
 <template>
     <div class="video-section">
-        <HelpVideosItem v-for="i in 10" />
+        <HelpVideosItem
+            v-for="({ title }) in videos"
+            :title="title" />
     </div>    
 </template>
 

@@ -4,21 +4,31 @@
 @use "@styles/abstracts/mixins/font-size";
 
 .video-item {
+    position: relative;
     height: 70vh;
     aspect-ratio: 1/2;
     border-radius: 10px;
 
+    .video {
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
+    }
+
     .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
         @include display.flex($align: flex-end);
         width: 100%;
         height: 100%;
         padding: 3%;
-        background-image: linear-gradient(180deg, rgba(primary.$primary, 0) 70%, primary.$primary);
+        background-image: linear-gradient(180deg, rgba(primary.$primary, 0) 50%, rgba(primary.$primary, 75%));
         border-radius: 10px;
 
         .title {
             color: primary.$white;
-            @include font-size.set-font-size(font-sizes.$text);
+            @include font-size.set-font-size(font-sizes.$text, "small");
         }
     }
 
