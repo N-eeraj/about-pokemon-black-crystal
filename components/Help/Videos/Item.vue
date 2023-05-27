@@ -47,9 +47,12 @@ const handleVideoClick = () => {
             ref="video"
             :src="url"
             :autoplay="play"
-            class="video" >
+            class="video"
+            :controls="play" >
         </video>
-        <div class="overlay">
+        <div
+            v-if="!play"
+            class="overlay">
             <span class="title">
                 {{ title }}
             </span>
