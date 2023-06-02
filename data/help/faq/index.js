@@ -1,4 +1,5 @@
 import pokemon from '@data/help/faq/answers/pokemon.html?raw'
+import starter from '@data/help/faq/answers/starter.html?raw'
 import pokedex from '@data/help/faq/answers/pokedex.html?raw'
 import gyms from '@data/help/faq/answers/gyms.html?raw'
 import party from '@data/help/faq/answers/party.html?raw'
@@ -13,6 +14,10 @@ export default [
     {
         question: 'What is a Pokémon?',
         answer: pokemon
+    },
+    {
+        question: 'What is a starter Pokémon?',
+        answer: starter
     },
     {
         question: 'What is a Pokédex?',
