@@ -7,6 +7,7 @@
     color: primary.$secondary-white;
     cursor: pointer;
     border-bottom: 3px solid primary.$primary;
+    transition: 400ms;
 
     &:hover {
         background-color: primary.$secondary;

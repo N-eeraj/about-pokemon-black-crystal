@@ -19,13 +19,17 @@ const handleTabChange = tab => {
       :tabs="tabs"
       @change="handleTabChange" />
 
-    <HelpFaq v-if="activeTab === 'faq'" />
-    <HelpVideos v-else-if="activeTab === 'videos'" />
+    <Transition name="fade">
+      <HelpFaq v-if="activeTab === 'faq'" />
+    </Transition>
+    <Transition name="fade">
+      <HelpVideos v-if="activeTab === 'videos'" />
+    </Transition>
   </div>
 </template>
 
 <style
-    src="@styles/pages/help.scss"
-    lang="scss"
-    scoped>
+  src="@styles/pages/help.scss"
+  lang="scss"
+  scoped>
 </style>

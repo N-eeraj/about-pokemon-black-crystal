@@ -3,7 +3,7 @@ import { resolve } from 'path'
 
 export default defineNuxtConfig({
     app: {
-        baseURL: process.env.NODE_ENV === 'production' ? '/about-pokemon-black-crystal/' : '/'
+      baseURL: process.env.NODE_ENV === 'production' ? '/about-pokemon-black-crystal/' : '/'
     },
     modules: ['nuxt-icon'],
     alias: {
