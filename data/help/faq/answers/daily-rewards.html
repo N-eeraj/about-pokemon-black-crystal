@@ -22,30 +22,46 @@
         }
 
         .mystery-box-img {
-            width: 150px;
+            width: clamp(100px, 30%, 150px);
         }
 
         .text-container {
             width: 50%;
         }
 
+        .note {
+            margin-top: 25px;
+            padding: 10px;
+            background-color: #0007;
+            border-radius: 3px;
+        }
+
         @media (orientation: landscape) {
             .daily-rewards-container {
                 flex-direction: row;
                 justify-content: space-evenly;
-                align-items: flex-start;
                 column-gap: 25px;
+            }
+            .daily-rewards-container.main {
+                align-items: flex-start;
+            }
+            .daily-rewards-container.mystery-box {
+                align-items: center;
             }
 
             .daily-rewards-container p {
                 width: 35%;
             }
-            .daily-rewards-container p:last-of-type {
+            .daily-rewards-container.mystery-box p:last-of-type {
                 order: 2;
             }
 
             .mystery-box-img {
                 order: 1;
+            }
+
+            .note {
+                border-radius: 5px;
             }
         }
     </style>
@@ -61,7 +77,6 @@
         <p>
             You'll receive better items by collecting the rewards daily.
             After a 7 days streak, a new streak will be started.
-            The streak will be reset if you don't collect the daily rewards in consecutive days.
         </p>
     </article>
 
@@ -72,8 +87,13 @@
             You'll surely receive better rewards collected from Mystery Boxes when your Daily Streak is higher.
         </p>
         <p>
-            These rewards maybe anything from <em> Pokéballs </em> to <em> Evolution Items </em>, and you might even recei a <em> Master ball </em> if you're lucky enough.
+            These rewards maybe anything from <em> Pokéballs </em> to <em> Evolution Items </em>, and you might even receive a <em> Master ball </em> if you're lucky enough.
         </p>
     </article>
+
+    <aside class="note">
+        To get a new reward you'll have to wait atleast 24 hours after collecting the previous.
+        And if you wait more than 48 hours to collect the daily reward, your daily reward streak will be reset.
+    </aside>
 </body>
 </html>

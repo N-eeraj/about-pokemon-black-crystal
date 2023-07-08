@@ -1,9 +1,9 @@
 # Pokémon Black Crystal
 
-### About
+### ℹ️ About
 **Pokémon Black Crystal** is a free to play fan made online Pokémon game that you can play with your friends. This is the website for the same.
 
-### Web Pages
+### 📄 Web Pages
 <details>
     <summary>
         Landing Page
@@ -23,7 +23,7 @@
     This page explains about the project & give credits to the Pokémon Company and others.
 </details>
 
-#### Game Modes
+#### 🎮 Game Modes
 <details>
     <summary>
         Story Mode
@@ -66,6 +66,9 @@
     Have fun playing mini-games.
 </details>
 
+### 👨‍💻 Tech Used
+- [Nuxt 3](https://nuxt.com/)
+- [SCSS](https://sass-lang.com/)
 
 <br>
 
