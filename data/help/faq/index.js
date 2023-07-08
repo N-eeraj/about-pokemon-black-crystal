@@ -9,6 +9,7 @@ import levelUp from '@data/help/faq/answers/level-up.html?raw'
 import evolution from '@data/help/faq/answers/evolution.html?raw'
 import pokecoins from '@data/help/faq/answers/pokecoins.html?raw'
 import getPokecoins from '@data/help/faq/answers/get-pokecoins.html?raw'
+import dailyRewards from '@data/help/faq/answers/daily-rewards.html?raw'
 
 export default [
     {
@@ -54,5 +55,9 @@ export default [
     {
         question: 'How to get Pokécoins?',
         answer: getPokecoins
+    },
+    {
+        question: 'Daily Rewards',
+        answer: dailyRewards
     }
 ]

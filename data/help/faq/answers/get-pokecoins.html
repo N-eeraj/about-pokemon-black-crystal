@@ -9,12 +9,11 @@
 
         .container {
             display: flex;
-            justify-content: space-between;
+            justify-content: space-around;
             align-items: center;
             column-gap: 20px;
         }
-
-        .container:nth-child(2) {
+        .container:nth-child(odd) {
             flex-direction: row-reverse;
         }
 
@@ -23,7 +22,6 @@
             object-fit: contain;
             margin-top: 10px;
         }
-
         .get-coin-img.story-mode-highlighted {
             border: 1px solid;
             border-radius: 5px;
@@ -31,11 +29,11 @@
 
         @media (orientation: landscape) {
             p {
-                width: 70%;
+                width: 65%;
             }
 
             .get-coin-img {
-                width: 200px;
+                width: 150px;
                 height: auto;
             }
         }
