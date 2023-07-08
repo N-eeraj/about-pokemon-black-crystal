@@ -14,10 +14,19 @@
             column-gap: 20px;
         }
 
-        .event-image {
+        .container:nth-child(2) {
+            flex-direction: row-reverse;
+        }
+
+        .get-coin-img {
             height: 250px;
             object-fit: contain;
             margin-top: 10px;
+        }
+
+        .get-coin-img.story-mode-highlighted {
+            border: 1px solid;
+            border-radius: 5px;
         }
 
         @media (orientation: landscape) {
@@ -25,7 +34,7 @@
                 width: 70%;
             }
 
-            .event-image {
+            .get-coin-img {
                 width: 200px;
                 height: auto;
             }
@@ -36,14 +45,21 @@
 <body>
     <article class="text-container">
         <div class="container">
+            <img src="images/help/faqs/story-mode-highlighted.png" alt="Story Mode" class="get-coin-img story-mode-highlighted">
+            <p>
+                You'll receive Pokécoins upon defeating other trainers in the <strong> Story mode </strong>.
+                The amount of Pokécoins you receive will vary with each opponent, but it will increase as you move forward.
+            </p>
+        </div>
+        <div class="container">
+            <img src="images/help/faqs/arcade-events.png" alt="Arcade" class="get-coin-img">
             <p>
                 You participate in the Arcade events, face different battles and earn Pokécoins on successfully completing the challenge.
                 These events are free to participate in.
             </p>
-            <img src="images/help/faqs/arcade-events.png" alt="Arcade" class="event-image">
         </div>
         <div class="container">
-            <img src="images/help/faqs/carnival-events.png" alt="Carnival" class="event-image">
+            <img src="images/help/faqs/carnival-events.png" alt="Carnival" class="get-coin-img">
             <p>
                 Participate in the Carnival events, play different minigames, some of these events will help you to gain Pokécoins.
                 Some of these events are free while others require payment to participate in.
