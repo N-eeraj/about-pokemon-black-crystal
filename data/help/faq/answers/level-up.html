@@ -1,15 +1,48 @@
 <html lang="en">
+<head>
+    <style>
+        .level-progress {
+            display: flex;
+            flex-direction: column;
+            row-gap: 20px;
+            margin-top: 25px;
+        }
+        
+        .gifs {
+            display: flex;
+            justify-content: space-evenly;
+            width: 100%;
+            height: 300px;
+        }
+
+        .level-progress img {
+            width: auto;
+            height: 100%;
+        }
+    </style>
+</head>
 <body>
     <article>
         <p>
             To make your Pokémon grow stronger, you'll need to level it up.
-            To level up your Pokémon, it complete a Pokémon battle without faining.
+            To level up your Pokémon, it complete a Pokémon battle without fainting.
             Different Pokémon levels-up at different rate.
         </p>
-        <br>
+        <br />
         <p>
             You can also use the Rare Candy to level up your Pokémon to the next level instantly.
             Rare Candies can be purchased in the in-game store, however they are very expensive.
+        </p>
+    </article>
+
+    <article class="level-progress">
+        <div class="gifs">
+            <img src="images/help/faqs/level-progress/low.gif" />
+            <img src="images/help/faqs/level-progress/high.gif" />
+        </div>
+        <p>
+            How close the Pokémon is to levelling up is indicated using the level progress meter.
+            In the example shown above, you can see that the level progress in the 2<sup>nd</sup> image is higher than the 1<sup>st</sup>.
         </p>
     </article>
 </body>
