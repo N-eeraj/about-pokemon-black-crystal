@@ -1,0 +1,15 @@
+[
+    {
+        "texts": [
+            "Pokémon and Pokémon character names are trademarks of Nintendo.",
+            "Assets used in the game includes characters, music and items from several Pokémon games and shows."
+        ],
+        "image": "/images/pokemon-logo.png"
+    },
+    {
+        "texts": [
+            "The Pokémon Company is an organization owned by Nintendo, Game Freak, and Creatures Inc., who all share ownership of the Pokémon franchise."
+        ],
+        "image": "/images/pokemon-company.png"
+    }
+]

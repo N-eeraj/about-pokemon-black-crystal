@@ -1,20 +1,20 @@
 [
     [
         {
+            "link": "/info",
+            "text": "Info"
+        },
+        {
+            "link": "/help",
+            "text": "Help"
+        },
+        {
             "link": "/",
             "text": "Home"
         },
         {
-            "link": "/help",
-            "text": "Tutorials"
-        },
-        {
-            "link": "/info",
-            "text": "Disclaimer"
-        },
-        {
             "link": "/#about-game",
-            "text": "About Game"
+            "text": "About"
         }
     ],
     [

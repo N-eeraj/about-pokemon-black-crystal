@@ -1,0 +1,51 @@
+@use "@styles/abstracts/colors/palette";
+@use "@styles/abstracts/mixins/display";
+@use "@styles/abstracts/mixins/main-container";
+
+.info-container {
+    @include display.flex($direction: column, $align: center, $row: 30);
+    width: 100%;
+    min-height: 100%;
+    @include main-container.container(50px, 5%);
+    background-color: palette.$primary;
+
+    .info-item {
+        @include display.flex($direction: column, $row: 25, $col: 100);
+
+        img {
+            width: 300px;
+        }
+
+        .text-container {
+            @include display.flex($direction: column, $row: 10);
+
+            p {
+                color: palette.$white;
+            }
+        }
+    }
+}
+
+@media (orientation: landscape) {
+    .info-container {
+        row-gap: 100px;
+        padding: 100px 5%;
+
+        .info-item {
+            flex-direction: row;
+            justify-content: center;
+
+            &:nth-child(even) {
+                flex-direction: row-reverse;
+            }
+    
+            img {
+                width: 30%;
+            }
+
+            .text-container {
+                width: 40%;
+            }
+        }
+    }
+}
