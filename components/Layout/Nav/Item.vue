@@ -1,5 +1,5 @@
 <script setup>
-defineProps({
+const props = defineProps({
     to: {
         type: String,
         required: true
@@ -13,6 +13,8 @@ defineProps({
         required: true
     }
 })
+const runtime = useRuntimeConfig()
+const icon = computed(() => `${runtime.public.baseURL}/icons/navigation/${props.icon}.svg`)
 </script>
 
 <template>
@@ -22,7 +24,7 @@ defineProps({
             class="nav-link">
 
             <img
-                :src="`icons/navigation/${icon}.svg`"
+                :src="icon"
                 :alt="icon"
                 class="link-icon" />
 

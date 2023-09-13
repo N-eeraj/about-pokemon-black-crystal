@@ -5,7 +5,7 @@ useMeta('Page not found')
 <template>
     <div class="error-container">
         <img
-            src="@images/404.png"
+            src="/images/404.png"
             alt="Sleeping Snorlax"
             class="error-image" />
         <div class="text-container">

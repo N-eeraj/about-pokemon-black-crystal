@@ -9,7 +9,7 @@ import multiplayerDetails from '@data/home/multiplayerDetails'
         </h2>
 
         <img
-            src="@images/home/multiplayer/friends.png"
+            src="/images/home/multiplayer/friends.png"
             alt="friends"
             class="image" />
 
