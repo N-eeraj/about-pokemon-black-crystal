@@ -2,6 +2,9 @@
 import data from '@data/info.json'
 
 useMeta('Info')
+
+const runtime = useRuntimeConfig()
+const getImage = image => `${runtime.public.baseURL}/${image}`
 </script>
 
 <template>
@@ -11,7 +14,7 @@ useMeta('Info')
       :key="index"
       class="info-item">
 
-      <img :src="image" />
+      <img :src="getImage(image)" />
 
       <div class="text-container">
         <p

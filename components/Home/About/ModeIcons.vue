@@ -1,16 +1,18 @@
 <script setup>
-defineProps({
+const props = defineProps({
     mode: {
         type: String,
         required: true
     }
 })
+const runtime = useRuntimeConfig()
+const icon = computed(() => `${runtime.public.baseURL}/images/mode-icons/${props.mode}.svg`)
 </script>
 
 <template>
     <div class="mode-container">
         <img
-            :src="`images/mode-icons/${mode}.svg`"
+            :src="icon"
             :alt="mode"
             class="icon" />
     </div>

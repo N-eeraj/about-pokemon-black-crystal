@@ -38,7 +38,7 @@ onMounted(() => {
         <div class="image-container">
             <img
                 v-if="randomCharacter"
-                src="@images/home/about/phone-frame.png"
+                src="/images/home/about/phone-frame.png"
                 alt="Phone Frame"
                 class="phone-frame"
                 :style="`background-image: url(${randomCharacter});`" />

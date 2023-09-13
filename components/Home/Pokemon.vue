@@ -32,13 +32,14 @@ const handleCountPokemon = () => {
     observer.observe(document.querySelector('#pokemon .count'))
 }
 
-const handleRandomPokemon = () => {
+const runtime = useRuntimeConfig()
+const generateRandomPokemon = () => {
     const randomPokemonName = pokemonCards[getInRange(0, pokemonCards.length)]
-    randomPokemonImage.value = `images/home/pokemon/cards/${randomPokemonName}.png`
+    randomPokemonImage.value = `${runtime.public.baseURL}/images/home/pokemon/cards/${randomPokemonName}.png`
 }
 
 onMounted(() => {
-    handleRandomPokemon()
+    generateRandomPokemon()
     handleCountPokemon()
 })
 </script>
@@ -74,7 +75,7 @@ onMounted(() => {
         </div>
 
         <img
-            src="@images/home/pokemon/group.png"
+            src="/images/home/pokemon/group.png"
             alt="Pokemon"
             class="image pokemon" />
         <img

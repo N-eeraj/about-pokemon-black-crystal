@@ -9,6 +9,10 @@ export default defineNuxtConfig({
     '@composables': resolve(__dirname, './composables'),
     '@data': resolve(__dirname, './data'),
     '@styles': resolve(__dirname, './styles'),
-    '@images': resolve(__dirname, './public/images')
+  },
+  runtimeConfig: {
+    public: {
+      baseURL: process.env.NODE_ENV === 'production' ? '/about-pokemon-black-crystal' : ''
+    }
   }
 })

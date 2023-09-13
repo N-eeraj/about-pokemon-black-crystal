@@ -1,5 +1,5 @@
 <script setup>
-defineProps({
+const props = defineProps({
     icon: {
         type: String,
         required: true
@@ -13,12 +13,14 @@ defineProps({
         required: true
     }
 })
+const runtime = useRuntimeConfig()
+const icon = computed(() => `${runtime.public.baseURL}/icons/events/${props.icon}.svg`)
 </script>
 
 <template>
     <div class="card">
         <img
-            :src="`icons/events/${icon}.svg`"
+            :src="icon"
             :alt="icon"
             class="icon">
         <article class="text-container">

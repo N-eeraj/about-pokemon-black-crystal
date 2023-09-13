@@ -14,7 +14,8 @@ const props = defineProps({
     }
 })
 
-const opponentsImage = computed(() => `images/home/opponents/${props.image}.png`)
+const runtime = useRuntimeConfig()
+const opponentsImage = computed(() => `${runtime.public.baseURL}/images/home/opponents/${props.image}.png`)
 </script>
 
 <template>

@@ -17,6 +17,11 @@ const handleChange = (index) => {
     }
 }
 
+const runtime = useRuntimeConfig()
+const setBaseURL = answer => answer
+    .replaceAll(/\"\//g, `${runtime.public.baseURL}/`)
+    .replaceAll(/\"/g, ``)
+
 onMounted(() => {
     if (route.query.qNo)
         handleChange(route.query.qNo - 1)
@@ -28,7 +33,7 @@ onMounted(() => {
         <HelpFaqExpansionPanel
             v-for="({ question, answer }, index) in faqs"
             :question="question"
-            :answer="answer"
+            :answer="setBaseURL(answer)"
             :is-active="currentFAQ === index"
             :key="index"
             @change="handleChange(index)" />

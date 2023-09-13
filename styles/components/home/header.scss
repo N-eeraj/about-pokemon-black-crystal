@@ -10,7 +10,7 @@
     @include display.flex($direction: column, $justify: center);
     @include main-container.full-screen;
     @include main-container.max-width-padding;
-    background-image: url("@images/home/header/background.webp");
+    background-image: url("/images/home/header/background.webp");
     background-size: cover;
     background-position: center;
 

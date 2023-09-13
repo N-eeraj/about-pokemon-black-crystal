@@ -6,7 +6,7 @@ import footerLinks from '@data/layout/footerLinks'
     <footer class="footer-section">
         <div class="title">
             <img
-                src="@images/pokemon-logo.png"
+                src="/images/pokemon-logo.png"
                 alt="Pokémon"
                 class="logo" />
             <h3 class="game-name">
