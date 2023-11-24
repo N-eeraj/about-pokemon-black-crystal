@@ -3,12 +3,12 @@
 @use "@styles/abstracts/mixins/main-container";
 
 #__nuxt {
-    @include display.flex($direction: column, $align: stretch);
-    @include main-container.full-screen;
+	@include display.flex($direction: column, $align: stretch);
+	@include main-container.full-screen;
 
-    main {
-        flex-grow: 1;
-    }
+	main {
+		flex-grow: 1;
+	}
 }
 
 /* Vue Transitions */
@@ -16,10 +16,10 @@
 // Fade
 .fade-enter-active,
 .fade-leave-active {
-  transition-duration: 400ms;
+	transition-duration: 400ms;
 }
 
 .fade-enter-from,
 .fade-leave-to {
-  opacity: 0;
+	opacity: 0;
 }

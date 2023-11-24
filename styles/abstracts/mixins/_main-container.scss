@@ -1,6 +1,6 @@
 @mixin full-screen {
     width: 100%;
-    height: 100dvh;
+    height: 100svh;
 }
 
 @mixin max-width-padding($y: 0, $x: 5%) {
